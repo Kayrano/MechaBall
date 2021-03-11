@@ -64,9 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MasterScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerInput.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Game\MasterScript.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerCollider.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
