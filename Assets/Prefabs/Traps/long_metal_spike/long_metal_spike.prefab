@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6189711682359939838}
   - component: {fileID: 4790127935146968079}
+  - component: {fileID: 8710038494729058884}
   m_Layer: 0
   m_Name: long_metal_spike
   m_TagString: Untagged
@@ -81,3 +82,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &8710038494729058884
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013192454032020449}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.19754013, y: -0.3524022}
+  - {x: -0.002456665, y: 0.5875844}
+  - {x: 0.20128617, y: -0.35615146}

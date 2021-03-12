@@ -9,59 +9,55 @@ namespace Character
 {
     public class PlayerInput : MonoBehaviour
     {
-        PlayerMovementScript playerMovement;
-        Animator animator;
+        #region Main Assignment
+        PlayerScript playerS;
+        #endregion
 
-        private PlayerCollider playerCollider;
+        #region Input Conditions
+        internal bool isRightPressed;
+        internal bool isLeftPressed;
+        internal bool isJumpPressed;
+        #endregion
 
-        private Rigidbody2D rb2d;
-
-        public bool jumpPressed = false;
-        
-
-        private float movepressed = 0f;
-        public float MovePressed
+        private void Start()
         {
-            get
-            {
-                return movepressed;
-            }
+            playerS = GetComponent<PlayerScript>();
+            print("Input Initialized");
+        }
 
-            set
-            {
-                movepressed = value;
-            }
-
+        private void Update()
+        {
             
-        }
-        
-
-        
-
-        private void Awake()
-        {
-            playerMovement = GetComponent<PlayerMovementScript>();
-            rb2d = GetComponent<Rigidbody2D>();
-            playerCollider = GetComponent<PlayerCollider>();
-            animator = GetComponent<Animator>();
-        }
-
-       
-
-        
-        void Update()
-        {
-            movepressed = Input.GetAxisRaw("Horizontal");
-
-            
-
-            if (Input.GetButtonDown("Jump") && ((playerCollider.IsUp() || playerCollider.IsDown()) || (playerCollider.IsRight() || playerCollider.IsLeft())))
+            // Move Right Input
+            if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
-                jumpPressed = true;
-                
+                isRightPressed = true;
+            }
+            else
+            {
+                isRightPressed = false;
+            }
+
+            //Move Left Input
+            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                isLeftPressed = true;
+            }
+            else
+            {
+                isLeftPressed = false;
+            }
+
+            //Jump Input
+            if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                isJumpPressed = true;
+            }
+            else
+            {
+                isJumpPressed = false;
             }
         }
-
 
     }
 }

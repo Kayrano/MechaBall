@@ -7,113 +7,89 @@ namespace Character
 {
     public class PlayerMovementScript : MonoBehaviour
     {
-        Rigidbody2D rb2d;
-        PlayerInput playerInput;
-        PlayerCollider playerCollider;
-        Animator animator;
-        
-        
-
-        #region Properties
-
-
-
-        [SerializeField][Range(0,20f)]
-        private float jumpForce = 30f;
-        public float JumpForce
-        {
-            get => jumpForce;
-
-
-            set => jumpForce = value;
-            
-        }
-
-        internal float horizontalMove;
-
-        [SerializeField]
-        private float moveSpeed = 50f;
-        public float MoveSpeed
-        {
-            get => moveSpeed;
-
-            set => moveSpeed = value;
-        }
-
-        
-        private Vector3 velocity = Vector3.zero;
+        #region Main Assignment
+        PlayerScript playerS;
         #endregion
 
-        private void Awake()
-        {
-            rb2d = GetComponent<Rigidbody2D>();
-            playerInput = GetComponent<PlayerInput>();
-            playerCollider = GetComponent<PlayerCollider>();
-            animator = GetComponent<Animator>();
-            
-        }
+        #region Properties
         
+        #endregion
 
+        private void Start()
+        {
+            playerS = GetComponent<PlayerScript>();
+            print("Player Movement Initialized");
+        }
         private void FixedUpdate()
         {
+            playerS.currentSpeed = Mathf.Abs(playerS.rb2d.velocity.x);
 
-
-
-            if (Mathf.Abs(playerInput.MovePressed) > 0.01f)
+            //Move Right
+            if (playerS.playerI.isRightPressed)
             {
-                Move();
+                MoveRight();
+                
             }
-            
-
-            if (playerInput.jumpPressed )
+            //Move Left
+            if (playerS.playerI.isLeftPressed)
+            {
+                MoveLeft();
+                
+            }
+            //Jump
+            if (playerS.playerI.isJumpPressed && playerS.isGrounded)
             {
                 Jump();
-                playerInput.jumpPressed = false;
                 
+                playerS.playerI.isJumpPressed = false;
             }
+            
 
 
-                
-        }
-
-        public void Jump()
-        {
-            if (playerCollider.IsUp())
-            {
-                animator.SetBool("IsJump", true);
-                rb2d.velocity = Vector2.down * jumpForce;
-            }
-            else if (playerCollider.IsDown())
-            {
-                animator.SetBool("IsJump", true);
-                rb2d.velocity = Vector2.up * jumpForce*1.25f;
-            }
-            else if (playerCollider.IsLeft())
-            {
-                animator.SetBool("IsJump", true);
-                rb2d.velocity = Vector2.right * jumpForce/2;
-            }
-            else if (playerCollider.IsRight())
-            {
-                animator.SetBool("IsJump", true);
-                rb2d.velocity = Vector2.left * jumpForce/2;
-            }
 
 
+
+
+
+            
 
         }
 
-        public void Move()
+
+
+
+
+        #region Movement Methods
+        internal void MoveRight()
         {
-            horizontalMove = playerInput.MovePressed * moveSpeed * Time.fixedDeltaTime;
-            Vector3 targetVelocity = new Vector2(horizontalMove * 10f, rb2d.velocity.y);
-
-            rb2d.velocity = Vector3.SmoothDamp(rb2d.velocity, targetVelocity, ref velocity, .05f);
-
-           
+            Vector3 velocity = Vector3.zero;
+            Vector3 targetVelocity = new Vector2(playerS.moveSpeed * Time.fixedDeltaTime, playerS.rb2d.velocity.y);
+            playerS.rb2d.velocity = Vector3.SmoothDamp(playerS.rb2d.velocity,targetVelocity,ref velocity, .05f);
             
         }
+        internal void MoveLeft()
+        {
+            Vector3 velocity = Vector3.zero;
+            Vector3 targetVelocity = new Vector2(-playerS.moveSpeed * Time.fixedDeltaTime, playerS.rb2d.velocity.y);
+            playerS.rb2d.velocity = Vector3.SmoothDamp(playerS.rb2d.velocity, targetVelocity, ref velocity, .05f);
+
+        }
+        internal void Jump()
+        {
+            playerS.rb2d.velocity = Vector3.up * playerS.jumpSpeed;
+           
+        }
+
+
+        #endregion
+
 
         
+
+
+
+
+
+
     }
 }

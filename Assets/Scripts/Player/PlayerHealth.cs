@@ -7,29 +7,34 @@ namespace Character
 {
     public class PlayerHealth : MonoBehaviour
     {
-        public float maximumHealth = 3;
-        private Animator animator;
+        #region Main Assignment
+        PlayerScript playerS;
+        #endregion
 
-        private void Awake()
+        #region
+        
+
+        #endregion
+        private void Start()
         {
-            animator = GetComponent<Animator>();
+            playerS = GetComponent<PlayerScript>();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            if (maximumHealth <= 0)
-                Die();
-
+            if(playerS.playerHealth <= 0)
+            {
+                playerS.isDead = true;
+            }
         }
 
-        private void Die()
-        {
-            animator.SetBool("Die", true);
-        }
         public void TakeDamage()
         {
 
+            playerS.playerHealth = playerS.playerHealth - 1;
+
         }
+
+
     }
 }

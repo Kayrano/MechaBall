@@ -159,7 +159,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 649478689196458385}
   m_Bounds:
-    m_Center: {x: -0.0007150769, y: 0.00014039874, z: 0}
+    m_Center: {x: -0.0007151365, y: 0.00014016032, z: 0}
     m_Extent: {x: 0.62092495, y: 0.26328996, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -205,14 +205,15 @@ GameObject:
   - component: {fileID: 6709472944440175544}
   - component: {fileID: 6709472944440175545}
   - component: {fileID: 6709472944440175546}
-  - component: {fileID: 1436068843}
-  - component: {fileID: 1436068848}
-  - component: {fileID: 1436068849}
-  - component: {fileID: 1436068850}
-  - component: {fileID: 1250022908}
+  - component: {fileID: 1040046926}
+  - component: {fileID: 1040046925}
+  - component: {fileID: 1040046924}
+  - component: {fileID: 1040046923}
+  - component: {fileID: 1040046922}
+  - component: {fileID: 1040046931}
   m_Layer: 0
   m_Name: OrangeBall
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,6 +238,7 @@ Transform:
   - {fileID: 7411205790041614450}
   - {fileID: 5980883315243889040}
   - {fileID: 6839370634905204334}
+  - {fileID: 7037087009482507940}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -296,49 +298,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0128417015, y: 2.472034}
   serializedVersion: 2
   m_Radius: 1.109983
---- !u!114 &1436068843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6941426705917050631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb524b250f1f5f46955a664c1490b39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!114 &1436068848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6941426705917050631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 953344f7150a430478b066973cbca47f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpPressed: 0
---- !u!114 &1436068849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6941426705917050631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744efa31824a23c49bc2c13135c1c53d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 11
-  moveSpeed: 10
---- !u!114 &1436068850
+--- !u!114 &1040046926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,7 +310,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f50651536f47b4fa4cd165c863308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1250022908
+  playerHealth: 3
+  moveSpeed: 90
+  jumpSpeed: 10
+  currentSpeed: 0
+  groundCheckPoint: {fileID: 7037087009482507940}
+  checkRadius: 1.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &1040046925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941426705917050631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953344f7150a430478b066973cbca47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1040046924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941426705917050631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744efa31824a23c49bc2c13135c1c53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1040046923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941426705917050631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb524b250f1f5f46955a664c1490b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1040046922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,7 +367,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9a0f4a0bfbe964cadcc178631b053a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumHealth: 3
+--- !u!114 &1040046931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941426705917050631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a26d4fcf7344c4ab006c90114ab522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!1 &6972937041333752821
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +439,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7251986212422518083}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7697174775131774467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7037087009482507940}
+  m_Layer: 0
+  m_Name: groundcheckpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7037087009482507940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697174775131774467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7251986212422518083}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8093020775953258174
 GameObject:
@@ -522,7 +569,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8218856500768423598}
   m_Bounds:
-    m_Center: {x: 0.000060021877, y: 0.00074499846, z: 0}
+    m_Center: {x: 0.000059843063, y: 0.0007452369, z: 0}
     m_Extent: {x: 0.70339, y: 0.34666497, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -659,6 +706,6 @@ MonoBehaviour:
   - {fileID: 5688180053279859674}
   m_Bounds:
     m_Center: {x: -0.00000011920929, y: 0.00002026558, z: 0}
-    m_Extent: {x: 1.135, y: 1.1233499, z: 0}
+    m_Extent: {x: 1.135, y: 1.12335, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

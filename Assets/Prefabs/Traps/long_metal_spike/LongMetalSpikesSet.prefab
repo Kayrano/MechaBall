@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3258909487797594304}
   - component: {fileID: 6661541119241848532}
+  - component: {fileID: 3172630272705696928}
+  - component: {fileID: 1542018093}
   m_Layer: 0
   m_Name: LongMetalSpikesSet
   m_TagString: Spike
@@ -25,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3258909487797594305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.543344, y: -0.28773212, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8709888092237531881}
@@ -53,6 +55,39 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3172630272705696928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258909487797594305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ccae3060aa54549bb0b829700ca818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1542018093
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258909487797594305}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &3258909487710296087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,12 +103,12 @@ PrefabInstance:
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.766
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
@@ -120,6 +155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: long_metal_spike
       objectReference: {fileID: 0}
+    - target: {fileID: 8710038494729058884, guid: d04249567f3666c408510c9498063eca,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04249567f3666c408510c9498063eca, type: 3}
 --- !u!4 &8709888092237531881 stripped
@@ -143,12 +183,12 @@ PrefabInstance:
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.76604
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
@@ -195,6 +235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: long_metal_spike(1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8710038494729058884, guid: d04249567f3666c408510c9498063eca,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04249567f3666c408510c9498063eca, type: 3}
 --- !u!4 &8709888092437683273 stripped
@@ -218,12 +263,12 @@ PrefabInstance:
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.766
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189711682359939838, guid: d04249567f3666c408510c9498063eca,
         type: 3}
@@ -269,6 +314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: long_metal_spike (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710038494729058884, guid: d04249567f3666c408510c9498063eca,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04249567f3666c408510c9498063eca, type: 3}

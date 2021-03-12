@@ -7,27 +7,60 @@ namespace Character
 {
     public class PlayerScript : MonoBehaviour
     {
-        PlayerCollider playerCollider;
-        
-        PlayerMovementScript playerMovementScript;
+        #region Child Assignments
+        internal PlayerHealth playerH;
+        internal PlayerInput playerI;
+        internal PlayerMovementScript playerM;
+        internal PlayerCollider playerC;
+        #endregion
 
-        void Awake()
+        #region Components
+        internal Rigidbody2D rb2d;
+        internal Collider2D playerCollider;
+
+
+        #endregion
+
+        #region Properties
+
+        public int playerHealth = 3;
+        
+        internal bool isDead = false;
+
+        public float moveSpeed = 25f;
+        public float jumpSpeed = 45f;
+        public float currentSpeed;
+        #endregion
+
+        #region Ground Check Properties
+        internal bool isGrounded;
+        public Transform groundCheckPoint;
+        public float checkRadius;
+        public LayerMask groundLayer;
+        #endregion
+
+        private void Awake()
         {
-            playerCollider = GetComponent<PlayerCollider>();
-            playerMovementScript = GetComponent<PlayerMovementScript>();
             
+            playerH = GetComponent<PlayerHealth>();
+            playerI = GetComponent<PlayerInput>();
+            playerM = GetComponent<PlayerMovementScript>();
+            playerC = GetComponent<PlayerCollider>();
+
+            playerCollider = GetComponent<Collider2D>();
+            rb2d = GetComponent<Rigidbody2D>();
+            
+            
+            
+            print("Player Script Initialized");
         }
+
         
-            
-        
 
-        // Update is called once per frame
-        void Update()
-        {
-            
 
-        }
 
-       
+
+
+
     }
 }
