@@ -64,8 +64,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreImpl.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreModule.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreProrationMode.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreUnsupportedException.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\IGooglePlayConfiguration.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\IGooglePlayStoreExtensions.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\AcknowledgeResponseListener.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\BillingClientStateListener.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\BillingResponseCode.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\Constants.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\ConsumeResponseListener.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\GooglePlayBillingInventory.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\GooglePlayBillingUtil.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\JniUtils.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\PriceChangeConfirmationListener.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\Purchase.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\PurchaseUpdatedListener.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\SkuDetails.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\SkuDetailsResponseListener.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Internal\SkuType.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Mock\FakeGooglePlayConfiguration.cs" />
+    <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\Mock\FakeGooglePlayStoreExtensions.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Game\MasterScript.cs" />
+    <Compile Include="Assets\Scripts\Game\MainMenu\MainMenuScript.cs" />
+    <Compile Include="Assets\Scripts\Game\MainMenu\OptionsMenuScript.cs" />
+    <Compile Include="Assets\Scripts\Game\Pausemenu\PauseScript.cs" />
+    <Compile Include="Assets\Scripts\Game\UI Health\UIHealthScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCollider.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
@@ -73,6 +105,32 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\Spikes\SpikeScript.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.appupdate\Proguard\app_update.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.assetdelivery\Proguard\asset_delivery.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.review\Proguard\review.txt" />
+    <None Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Proguard\billing.txt" />
+    <None Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.core\Proguard\common.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -701,7 +759,44 @@
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Google.Play.Review.csproj">
+      <Project>{79CFB721-480E-5EC7-471D-C198A90F7FAE}</Project>
+      <Name>Google.Play.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.AssetDelivery.csproj">
+      <Project>{F7EC8882-A03B-F5F3-DD91-2B50133AE3FF}</Project>
+      <Name>Google.Play.AssetDelivery</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.Instant.csproj">
+      <Project>{FD9B7E85-84E5-ED81-CF2F-002B32177AE9}</Project>
+      <Name>Google.Play.Instant</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.Billing.Editor.csproj">
+      <Project>{CE15CC23-A676-BAAA-565B-2B6B202EFDB8}</Project>
+      <Name>Google.Play.Billing.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.Core.csproj">
+      <Project>{69A10A70-6DB3-E77F-4F99-778B3F9637F5}</Project>
+      <Name>Google.Play.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Android.AppBundle.Editor.csproj">
+      <Project>{D95F434F-75B5-7755-0E46-5780BE09902C}</Project>
+      <Name>Google.Android.AppBundle.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.Instant.Editor.csproj">
+      <Project>{9E9F4AD3-909E-69E4-62EB-23B55F383E9A}</Project>
+      <Name>Google.Play.Instant.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.AppUpdate.csproj">
+      <Project>{234B1824-D481-58E1-5CB3-1C5D9F0F7CDF}</Project>
+      <Name>Google.Play.AppUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.Common.csproj">
+      <Project>{C1BE8B38-2D91-44EC-20B6-59F0B61C6B2B}</Project>
+      <Name>Google.Play.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

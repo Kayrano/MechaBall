@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6661541119241848532}
   - component: {fileID: 3172630272705696928}
   - component: {fileID: 1542018093}
+  - component: {fileID: 4403887640175535625}
   m_Layer: 0
   m_Name: LongMetalSpikesSet
   m_TagString: Spike
@@ -67,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ccae3060aa54549bb0b829700ca818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerS: {fileID: 0}
 --- !u!50 &1542018093
 Rigidbody2D:
   serializedVersion: 4
@@ -88,6 +90,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!68 &4403887640175535625
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258909487797594305}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.1954658, y: -0.34144735}
+  - {x: -0.00051753223, y: 0.5678308}
+  - {x: 0.18876165, y: -0.33221906}
+  - {x: 0.8164095, y: -0.3312965}
+  - {x: 1.0007296, y: 0.57321936}
+  - {x: 1.1991544, y: -0.33676574}
+  - {x: 1.8223047, y: -0.34622967}
+  - {x: 1.9974492, y: 0.5731824}
+  - {x: 2.198009, y: -0.3460615}
 --- !u!1001 &3258909487710296087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,11 +341,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: long_metal_spike (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8710038494729058884, guid: d04249567f3666c408510c9498063eca,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04249567f3666c408510c9498063eca, type: 3}

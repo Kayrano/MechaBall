@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5303266079718721760}
   - component: {fileID: 4754549007469312743}
   - component: {fileID: 2582206821570451550}
+  - component: {fileID: 3543762120416398853}
+  - component: {fileID: 2292601294226846949}
   m_Layer: 0
   m_Name: SmallSpikesSet
   m_TagString: Spike
@@ -66,6 +68,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ccae3060aa54549bb0b829700ca818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerS: {fileID: 0}
+--- !u!50 &3543762120416398853
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283450106537468651}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!68 &2292601294226846949
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283450106537468651}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.1489754, y: 0.054430485}
+  - {x: -0.96204185, y: 0.4434061}
+  - {x: -0.7435188, y: 0.060023785}
+  - {x: -0.13802528, y: 0.05745697}
+  - {x: 0.058755875, y: 0.4279127}
+  - {x: 0.2620983, y: 0.05641842}
+  - {x: 0.8658619, y: 0.060341835}
+  - {x: 1.0426598, y: 0.44306612}
+  - {x: 1.2327118, y: 0.041868687}
 --- !u!1001 &675632656758459820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,46 +181,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small_metal_spike (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[0].x
-      value: -0.19673333
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[0].y
-      value: -0.09749937
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[1].x
-      value: -0.0025405884
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[1].y
-      value: 0.27529812
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[2].x
-      value: 0.20148468
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[2].y
-      value: -0.09808731
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8930cc12d2c4c47a1c5649ef524bfe, type: 3}
@@ -248,51 +257,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: small_metal_spike
       objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[0].x
-      value: -0.20087036
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[0].y
-      value: -0.10991764
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[1].x
-      value: -0.00667572
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[1].y
-      value: 0.2835784
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[2].x
-      value: 0.21390152
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[2].y
-      value: -0.10222721
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8930cc12d2c4c47a1c5649ef524bfe, type: 3}
 --- !u!4 &4806241833150819092 stripped
@@ -308,16 +272,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5303266079718721760}
     m_Modifications:
-    - target: {fileID: 1723509212755153967, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1723509212755153967, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6231579607020163100, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
         type: 3}
       propertyPath: m_RootOrder
@@ -377,46 +331,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small_metal_spike (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[0].x
-      value: -0.19672951
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[0].y
-      value: -0.08922005
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[1].x
-      value: -0.00667572
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[1].y
-      value: 0.28357792
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[2].x
-      value: 0.20148468
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589019750472596403, guid: 6f8930cc12d2c4c47a1c5649ef524bfe,
-        type: 3}
-      propertyPath: m_Points.Array.data[2].y
-      value: -0.089808464
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8930cc12d2c4c47a1c5649ef524bfe, type: 3}

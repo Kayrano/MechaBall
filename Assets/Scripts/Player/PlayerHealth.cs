@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Character
 {
@@ -11,18 +12,21 @@ namespace Character
         PlayerScript playerS;
         #endregion
 
-        #region
+        #region Healths
+         
         
 
         #endregion
         private void Start()
         {
             playerS = GetComponent<PlayerScript>();
+            
+           
         }
 
         private void Update()
         {
-            if(playerS.playerHealth <= 0)
+            if(playerS.currentHealth <= 0)
             {
                 playerS.isDead = true;
             }
@@ -31,7 +35,7 @@ namespace Character
         public void TakeDamage()
         {
 
-            playerS.playerHealth = playerS.playerHealth - 1;
+            playerS.currentHealth = playerS.currentHealth - 1;
 
         }
 

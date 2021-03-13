@@ -22,8 +22,8 @@ namespace Character
         #endregion
 
         #region Properties
-
-        public int playerHealth = 3;
+        private int maximumHealth = 3;
+        public int currentHealth;
         
         internal bool isDead = false;
 
@@ -55,7 +55,10 @@ namespace Character
             print("Player Script Initialized");
         }
 
-        
+        private void Start()
+        {
+            currentHealth = maximumHealth;
+        }
 
 
 
