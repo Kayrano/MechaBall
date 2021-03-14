@@ -11,6 +11,7 @@ namespace Character
     {
         #region Main Assignment
         PlayerScript playerS;
+        public Joystick joystick;
         #endregion
 
         #region Input Conditions
@@ -27,9 +28,25 @@ namespace Character
 
         private void Update()
         {
-            
+
+            mobileInput();
+
+            #region After build for mobile
+            //if(Application.isMobilePlatform)
+            //mobileInput();
+
+            //else
+            {
+                //pcInput();
+            }
+            #endregion
+        }
+
+
+        public void pcInput()
+        {
             // Move Right Input
-            if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 isRightPressed = true;
             }
@@ -39,7 +56,7 @@ namespace Character
             }
 
             //Move Left Input
-            if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 isLeftPressed = true;
             }
@@ -49,7 +66,7 @@ namespace Character
             }
 
             //Jump Input
-            if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 isJumpPressed = true;
             }
@@ -58,6 +75,37 @@ namespace Character
                 isJumpPressed = false;
             }
         }
+        public void mobileInput()
+        {
+            //Move right input
+            if(joystick.Horizontal >= 0.1f)
+            {
+                isRightPressed = true;
+            }
+            else
+            {
+                isRightPressed = false;
+            }
+            //Move left input
+            if(joystick.Horizontal <= -0.1f)
+            {
+                isLeftPressed = true;
+            }
+            else
+            {
+                isLeftPressed = false;
+            }
 
+            if(joystick.Vertical >= .5f)
+            {
+                isJumpPressed = true;
+            }
+            else
+            {
+                isJumpPressed = false;
+            }
+
+
+        }
     }
 }

@@ -24,7 +24,7 @@ public class PauseScript : MonoBehaviour
         }
     }
 
-    private void Pause()
+    public void Pause()
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
