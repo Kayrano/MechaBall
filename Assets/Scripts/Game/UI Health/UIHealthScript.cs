@@ -19,6 +19,8 @@ public class UIHealthScript : MonoBehaviour
     private void Update()
     {
         HealthCounter();
+
+        
         
     }
 

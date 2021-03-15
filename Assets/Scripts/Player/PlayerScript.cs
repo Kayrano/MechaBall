@@ -30,6 +30,8 @@ namespace Character
         public float moveSpeed = 25f;
         public float jumpSpeed = 45f;
         public float currentSpeed;
+
+        public int currentCoins = 0;
         #endregion
 
         #region Ground Check Properties
