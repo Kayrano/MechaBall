@@ -11,6 +11,7 @@ public class GameOverScript : MonoBehaviour
     public GameObject GameplayUI;
     public GameObject ControllerUI;
     int health;
+    bool isOver;
     
     
 
@@ -19,7 +20,7 @@ public class GameOverScript : MonoBehaviour
         health = playerS.currentHealth;
 
 
-        if (health <= 0) {
+        if (health <= 0 && !isOver) {
 
             GameOver();
         }
@@ -30,11 +31,13 @@ public class GameOverScript : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0.1f;
         Debug.Log("GAMEOVER WORKING");
         ControllerUI.SetActive(false);
         GameplayUI.SetActive(false);
         GameOverMenu.SetActive(true);
-        Time.timeScale = 0f;
+        isOver = true;
+        
     }
     
     public void Retry()
@@ -54,5 +57,5 @@ public class GameOverScript : MonoBehaviour
 
     }
 
-
+    
 }

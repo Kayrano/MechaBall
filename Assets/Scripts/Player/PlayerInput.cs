@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Character
 {
+    
     public class PlayerInput : MonoBehaviour
     {
         #region Main Assignment
@@ -77,6 +78,8 @@ namespace Character
         }
         public void mobileInput()
         {
+          
+
             //Move right input
             if(joystick.Horizontal >= 0.1f)
             {
@@ -105,6 +108,7 @@ namespace Character
                 isJumpPressed = false;
             }
 
+            
 
         }
     }
