@@ -41,6 +41,12 @@ namespace Character
         public LayerMask groundLayer;
         #endregion
 
+        #region Level Properties
+
+        public string currentLevel = "Level1";
+        
+
+        #endregion
         private void Awake()
         {
             

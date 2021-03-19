@@ -4,14 +4,18 @@ using UnityEngine;
 using Character;
 using UnityEngine.SceneManagement;
 
+
 public class GameOverScript : MonoBehaviour
 {
     public PlayerScript playerS;
     public GameObject GameOverMenu;
     public GameObject GameplayUI;
     public GameObject ControllerUI;
+    
     int health;
     bool isOver;
+    
+    
     
     
 
@@ -45,7 +49,7 @@ public class GameOverScript : MonoBehaviour
         ControllerUI.SetActive(true);
         GameplayUI.SetActive(true);
         GameOverMenu.SetActive(false);
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(LevelMaster.currentLevel);
         Time.timeScale = 1f;
     }
 

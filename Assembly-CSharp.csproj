@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
     <Compile Include="Assets\Scripts\Game\GameOver\GameOverScript.cs" />
+    <Compile Include="Assets\Scripts\Game\LevelMaster.cs" />
     <Compile Include="Assets\Scripts\Game\MainMenu\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\Game\MainMenu\OptionsMenuScript.cs" />
     <Compile Include="Assets\Scripts\Game\Pausemenu\PauseScript.cs" />

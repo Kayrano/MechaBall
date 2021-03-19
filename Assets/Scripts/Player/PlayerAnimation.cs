@@ -75,7 +75,7 @@ namespace Character {
             }
             else
             {
-                print("DEAD!!");
+                
             }
 
             CurrentState = currentState.ToString();
