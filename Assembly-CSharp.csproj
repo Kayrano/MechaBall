@@ -64,6 +64,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GameManager\Scripts\GameManager.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\GameOverMenu.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\GameplayUI.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\OptionsMenu.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\PauseMenu.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\UIManager.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Utils\Events.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreImpl.cs" />
     <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreModule.cs" />
     <Compile Include="Assets\ImportedAssets\GooglePlayPlugins\com.google.play.billing\Runtime\Scripts\GooglePlayStoreProrationMode.cs" />
@@ -95,12 +104,6 @@
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
-    <Compile Include="Assets\Scripts\Game\GameOver\GameOverScript.cs" />
-    <Compile Include="Assets\Scripts\Game\LevelMaster.cs" />
-    <Compile Include="Assets\Scripts\Game\MainMenu\MainMenuScript.cs" />
-    <Compile Include="Assets\Scripts\Game\MainMenu\OptionsMenuScript.cs" />
-    <Compile Include="Assets\Scripts\Game\Pausemenu\PauseScript.cs" />
-    <Compile Include="Assets\Scripts\Game\UI Health\UIHealthScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCollider.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />

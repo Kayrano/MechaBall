@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ namespace Character
 {
     public class PlayerScript : MonoBehaviour
     {
+
+        public static event Events.DieAction OnDie;
+
         #region Child Assignments
         internal PlayerHealth playerH;
         internal PlayerInput playerI;
@@ -24,8 +28,12 @@ namespace Character
         #region Properties
         private int maximumHealth = 3;
         public int currentHealth;
-        
+
         internal bool isDead = false;
+        bool hasEnded = false;
+        
+       
+
 
         public float moveSpeed = 25f;
         public float jumpSpeed = 45f;
@@ -41,12 +49,11 @@ namespace Character
         public LayerMask groundLayer;
         #endregion
 
-        #region Level Properties
 
-        public string currentLevel = "Level1";
+
         
 
-        #endregion
+
         private void Awake()
         {
             
@@ -66,9 +73,26 @@ namespace Character
         private void Start()
         {
             currentHealth = maximumHealth;
+            
+           
+            
+            
         }
 
+        private void Update()
+        {
+            if (isDead)
+            {
+                if (!hasEnded)
+                {
+                    OnDie.Invoke();
+                    hasEnded = true;
+                }
+                   
+                    
 
+            }
+        }
 
 
 

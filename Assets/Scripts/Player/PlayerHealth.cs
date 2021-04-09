@@ -12,11 +12,7 @@ namespace Character
         PlayerScript playerS;
         #endregion
 
-        #region Healths
-         
         
-
-        #endregion
         private void Start()
         {
             playerS = GetComponent<PlayerScript>();

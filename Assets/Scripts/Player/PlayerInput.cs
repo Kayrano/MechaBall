@@ -10,9 +10,16 @@ namespace Character
     
     public class PlayerInput : MonoBehaviour
     {
+        public enum DeviceType
+        {
+            PC,
+            MOBILE
+        }
         #region Main Assignment
         PlayerScript playerS;
         public Joystick joystick;
+
+        public DeviceType _device;
         #endregion
 
         #region Input Conditions
@@ -25,24 +32,37 @@ namespace Character
         {
             playerS = GetComponent<PlayerScript>();
             print("Input Initialized");
+
+            if (Application.isMobilePlatform)
+                _device = DeviceType.MOBILE;
+            else
+            {
+                _device = DeviceType.PC;
+            }
         }
 
         private void Update()
         {
-
-            mobileInput();
-
-            #region After build for mobile
-            //if(Application.isMobilePlatform)
-            //mobileInput();
-
-            //else
+            switch (_device)
             {
-                //pcInput();
+                case DeviceType.PC:
+                    pcInput();
+                    break;
+                case DeviceType.MOBILE:
+                    mobileInput();
+                    break;
+                default:
+                    break;
             }
-            #endregion
+
+
+            
+
+          
+           
         }
 
+      
 
         public void pcInput()
         {
