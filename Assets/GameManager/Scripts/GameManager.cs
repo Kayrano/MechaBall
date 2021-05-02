@@ -29,7 +29,7 @@ public class GameManager : Singleton<GameManager>
     List<AsyncOperation> _loadOperations;
     GameState _currentGameState = GameState.PREGAME;
 
-    private string _currentLevelName = string.Empty;
+    
 
     public GameState CurrentGameState
     {
@@ -59,14 +59,13 @@ public class GameManager : Singleton<GameManager>
     {
         UpdateState(GameState.DEAD);
         
-        
     }
 
     void HandleMainMenuFadeComplete(bool fadeOut)
     {
         if (!fadeOut)
         {
-            UnLoadLevel(_currentLevelName);
+            UnLoadLevel(GameData.currentLevel);
         }
     }
 
@@ -148,7 +147,8 @@ public class GameManager : Singleton<GameManager>
 
         ao.completed += OnLoadOperationComplete;
         _loadOperations.Add(ao);
-        _currentLevelName = levelName;
+        
+        GameData.currentLevel = levelName;
     }
     public void UnLoadLevel(string levelName)
     {
@@ -189,8 +189,8 @@ public class GameManager : Singleton<GameManager>
     public void Retry()
     {
         UpdateState(GameState.RETRY);
-        UnLoadLevel(_currentLevelName);
-        LoadLevel(_currentLevelName);
+        UnLoadLevel(GameData.currentLevel);
+        LoadLevel(GameData.currentLevel);
 
     }
 
