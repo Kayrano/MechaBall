@@ -129,7 +129,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -171099893
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 3
   m_Sprite: {fileID: -5747388793944816073, guid: 090fbb103aa63894291a0d58dd1dcd37,
     type: 3}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 649478689196458385}
   m_Bounds:
-    m_Center: {x: -0.0007815957, y: 0.0055627823, z: 0}
+    m_Center: {x: -0.0007815957, y: 0.005562544, z: 0}
     m_Extent: {x: 0.62153924, y: 0.2656333, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -311,7 +311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  isDead: 0
   moveSpeed: 400
   jumpSpeed: 20
   currentSpeed: 0
@@ -334,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
+  _device: 0
 --- !u!114 &1040046924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -171099893
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: -7020130932360729231, guid: 090fbb103aa63894291a0d58dd1dcd37,
     type: 3}
@@ -676,7 +676,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -171099893
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 4922199076883122041, guid: 090fbb103aa63894291a0d58dd1dcd37,
     type: 3}

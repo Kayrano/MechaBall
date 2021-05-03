@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - Platform
+  - 
   - 
   - 
   - 
@@ -41,6 +41,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: WaterPlatform
+    uniqueID: 468802449
+    locked: 0
+  - name: Enemies
+    uniqueID: 754520225
+    locked: 0
+  - name: BasePlatform
+    uniqueID: 2139628265
     locked: 0
   - name: Player
     uniqueID: 4123867403

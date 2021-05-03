@@ -2,7 +2,7 @@
 using Character;
 using System.Collections;
 
-[RequireComponent(typeof(PlayerScript))]
+
 public class SpikeScript : MonoBehaviour
 {
     
