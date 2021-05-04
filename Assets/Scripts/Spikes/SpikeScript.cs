@@ -6,7 +6,7 @@ using System.Collections;
 public class SpikeScript : MonoBehaviour
 {
     
-    public PlayerScript PlayerS;
+    
     private float targetTime;
     private bool timerEnded = true;
 
@@ -27,8 +27,10 @@ public class SpikeScript : MonoBehaviour
 
         if (!timerEnded) { return; }
 
+        PlayerScript playerS = collision.gameObject.GetComponent<PlayerScript>();
+
         Debug.Log("Spike Collided with player!!!" + collision.collider.name);
-        PlayerS.playerH.TakeDamage();
+        playerS.playerH.TakeDamage();
 
         targetTime = 1.2f;
         timerEnded = false;
