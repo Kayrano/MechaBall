@@ -653,6 +653,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.CacheServer">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
     </Reference>
@@ -728,6 +731,12 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Notifications.iOS">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Notifications.iOS.dll</HintPath>
     </Reference>
@@ -764,6 +773,9 @@
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
@@ -775,36 +787,6 @@
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ScriptableBuildPipeline">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
@@ -818,8 +800,26 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
