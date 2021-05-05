@@ -64,7 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Checkpoint2.cs" />
     <Compile Include="Assets\GameManager\Scripts\GameManager.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\GameOverMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\GameplayUI.cs" />
@@ -107,6 +106,7 @@
     <Compile Include="Assets\Prefabs\Powerups\Standard_Powerup\Powerup_Standard.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint1.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\Checkpoint2.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\Platforms\PathFollow.cs" />

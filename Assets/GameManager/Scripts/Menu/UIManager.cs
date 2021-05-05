@@ -24,7 +24,15 @@ public class UIManager : Singleton<UIManager>
         
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnPauseButtonClicked();
+        }
+    }
+
+
     public void OnPauseButtonClicked() //Checks for pause clicked.
     {
         GameManager.Instance.TogglePause();

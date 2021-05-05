@@ -41,8 +41,6 @@ public class PathFollow : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, patrolPoints[nextPoint], step);
 
-        Debug.Log($"Going to {nextPoint}");
-
 
     }
 

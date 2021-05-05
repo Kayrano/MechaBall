@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5556715652742448988}
   - component: {fileID: 6739750890598501600}
   - component: {fileID: 5249128460538492146}
+  - component: {fileID: 948956428}
   m_Layer: 0
   m_Name: spiky_mine
   m_TagString: Untagged
@@ -116,7 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ccae3060aa54549bb0b829700ca818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerS: {fileID: 0}
 --- !u!50 &6739750890598501600
 Rigidbody2D:
   serializedVersion: 4
@@ -154,3 +154,24 @@ CircleCollider2D:
   m_Offset: {x: -0.0069971085, y: -0.04898095}
   serializedVersion: 2
   m_Radius: 1.5809774
+--- !u!114 &948956428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534671982805179275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bcb4f9e38a65d4099247d9cef4bc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolPoints:
+  - {x: 18.5, y: 0.56, z: 0}
+  - {x: 19, y: 0.56, z: 0}
+  - {x: 19.5, y: 0.56, z: 0}
+  - {x: 20, y: 0.56, z: 0}
+  - {x: 20.5, y: 0.56, z: 0}
+  - {x: 21, y: 0.56, z: 0}
+  speed: 2
+  nextPoint: 0

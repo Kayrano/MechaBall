@@ -7,6 +7,7 @@ public class GameplayUI : MonoBehaviour
     [SerializeField] private GameObject UI;
     [SerializeField] private PlayerScript playerS;
     [SerializeField] private Canvas controllerCanvas;
+    [SerializeField] private Button pauseButton;
 
     [SerializeField] private Image Heart1;
     [SerializeField] private Image Heart2;
@@ -19,6 +20,7 @@ public class GameplayUI : MonoBehaviour
         if(playerS.playerI._device == PlayerInput.DeviceType.PC)
         {
             controllerCanvas.gameObject.SetActive(false);
+            pauseButton.gameObject.SetActive(false);
         }
     }
 

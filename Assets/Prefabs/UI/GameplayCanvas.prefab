@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &409368026550576126
 RectTransform:
   m_ObjectHideFlags: 0
@@ -682,6 +682,7 @@ MonoBehaviour:
   UI: {fileID: 409368026930207581}
   playerS: {fileID: 0}
   controllerCanvas: {fileID: 409368027861318290}
+  pauseButton: {fileID: 409368026550576127}
   Heart1: {fileID: 409368026552234884}
   Heart2: {fileID: 409368028135415818}
   Heart3: {fileID: 409368026337910166}
