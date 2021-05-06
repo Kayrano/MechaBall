@@ -281,6 +281,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
@@ -862,6 +865,18 @@
     <ProjectReference Include="Google.Play.Common.csproj">
       <Project>{C1BE8B38-2D91-44EC-20B6-59F0B61C6B2B}</Project>
       <Name>Google.Play.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{C69EEFF0-E1CF-ED18-C751-1E02479F6A1E}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{D63B9529-9F90-EC70-5F56-7DB00061FE0C}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{895E5A61-27F7-5680-6FCC-A0843F095886}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

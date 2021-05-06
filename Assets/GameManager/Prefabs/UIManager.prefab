@@ -1919,6 +1919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ab890e4af03af44a172229f35c3809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 2cee6da1fa2a007459634f2920efee07, type: 2}
 --- !u!1 &5478405714016924424
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,7 +3229,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2345793180604301686}
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:

@@ -103,12 +103,15 @@
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Heavy_Powerup\Powerup_Heavy.cs" />
+    <Compile Include="Assets\Prefabs\Powerups\Light_Powerup\Powerup_Light.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Standard_Powerup\Powerup_Standard.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint1.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint2.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\Checkpoint3.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
+    <Compile Include="Assets\Scripts\Platforms\LavaScript.cs" />
     <Compile Include="Assets\Scripts\Platforms\PathFollow.cs" />
     <Compile Include="Assets\Scripts\Platforms\WaterEffect.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
@@ -117,6 +120,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\Spikes\DevilSpiky\DevilSpikeyMine.cs" />
+    <Compile Include="Assets\Scripts\Spikes\EnemyTrigger.cs" />
     <Compile Include="Assets\Scripts\Spikes\SpikeScript.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -335,6 +340,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.22f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -895,6 +903,18 @@
     <ProjectReference Include="Google.Play.Common.csproj">
       <Project>{C1BE8B38-2D91-44EC-20B6-59F0B61C6B2B}</Project>
       <Name>Google.Play.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{C69EEFF0-E1CF-ED18-C751-1E02479F6A1E}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{D63B9529-9F90-EC70-5F56-7DB00061FE0C}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{895E5A61-27F7-5680-6FCC-A0843F095886}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

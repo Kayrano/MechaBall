@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Powerup_Standard : MonoBehaviour
 {
+    [SerializeField] private float mass = 1f;
+    [SerializeField] private Color newColor = Color.white;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("Player")) { return; }
@@ -12,9 +15,9 @@ public class Powerup_Standard : MonoBehaviour
 
         Renderer[] renderer = collision.gameObject.GetComponentsInChildren<Renderer>();
 
-        renderer[2].material.color = Color.white;
+        renderer[2].material.color = newColor;
 
-        rb2d.mass = 1;
+        rb2d.mass = mass;
 
         Debug.Log("STANDARD POWERUP USED!");
 

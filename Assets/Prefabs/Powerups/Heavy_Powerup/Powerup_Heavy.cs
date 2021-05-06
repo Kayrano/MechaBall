@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Powerup_Heavy : MonoBehaviour
 {
+    [SerializeField] private float mass = 10f;
+    [SerializeField] private Color newColor = Color.cyan;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("Player")) { return; }
@@ -12,9 +15,9 @@ public class Powerup_Heavy : MonoBehaviour
 
         Renderer[] renderer = collision.gameObject.GetComponentsInChildren<Renderer>();
 
-        renderer[2].material.color = Color.cyan;
+        renderer[2].material.color = newColor;
 
-        rb2d.mass = 10;
+        rb2d.mass = mass;
 
         Debug.Log("HEAVY POWERUP USED!");
 
