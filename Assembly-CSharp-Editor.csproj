@@ -272,6 +272,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.burst@1.3.0-preview.12/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -280,9 +283,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -838,6 +838,10 @@
       <Project>{F7EC8882-A03B-F5F3-DD91-2B50133AE3FF}</Project>
       <Name>Google.Play.AssetDelivery</Name>
     </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{C69EEFF0-E1CF-ED18-C751-1E02479F6A1E}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
     <ProjectReference Include="Google.Play.Instant.csproj">
       <Project>{FD9B7E85-84E5-ED81-CF2F-002B32177AE9}</Project>
       <Name>Google.Play.Instant</Name>
@@ -850,9 +854,17 @@
       <Project>{69A10A70-6DB3-E77F-4F99-778B3F9637F5}</Project>
       <Name>Google.Play.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{D63B9529-9F90-EC70-5F56-7DB00061FE0C}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Google.Android.AppBundle.Editor.csproj">
       <Project>{D95F434F-75B5-7755-0E46-5780BE09902C}</Project>
       <Name>Google.Android.AppBundle.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{895E5A61-27F7-5680-6FCC-A0843F095886}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Google.Play.Instant.Editor.csproj">
       <Project>{9E9F4AD3-909E-69E4-62EB-23B55F383E9A}</Project>
@@ -865,18 +877,6 @@
     <ProjectReference Include="Google.Play.Common.csproj">
       <Project>{C1BE8B38-2D91-44EC-20B6-59F0B61C6B2B}</Project>
       <Name>Google.Play.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{C69EEFF0-E1CF-ED18-C751-1E02479F6A1E}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{D63B9529-9F90-EC70-5F56-7DB00061FE0C}</Project>
-      <Name>PackageToolsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{895E5A61-27F7-5680-6FCC-A0843F095886}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
