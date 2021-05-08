@@ -21,7 +21,7 @@ namespace camera
         private void LateUpdate()
         {
             if(target.position.x > transform.position.x /2)
-                transform.position = new Vector3(target.position.x , 0,0) * smoothspeed;
+                transform.position = new Vector3(target.position.x , transform.position.y, 0) * smoothspeed;
 
            
         }
