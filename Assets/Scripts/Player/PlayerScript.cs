@@ -49,9 +49,27 @@ namespace Character
         public LayerMask groundLayer;
         #endregion
 
+        #region Jetpack
+        [SerializeField] GameObject Jetpack;
 
+        public bool isJetpackOn = false;
+
+        public void JetpackOn()
+        {
+            Jetpack.gameObject.SetActive(true);
+        }
+
+        public void JetpackOff()
+        {
+            Jetpack.gameObject.SetActive(false);
+        }
 
         
+
+
+        #endregion
+
+
 
 
         private void Awake()

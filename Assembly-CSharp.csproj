@@ -102,6 +102,7 @@
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Prefabs\Jetpack\Jetpack.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Heavy_Powerup\Powerup_Heavy.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Light_Powerup\Powerup_Light.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Standard_Powerup\Powerup_Standard.cs" />

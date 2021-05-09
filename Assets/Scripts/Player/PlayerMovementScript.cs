@@ -12,7 +12,9 @@ namespace Character
         #endregion
 
         #region Properties
-        
+
+        [SerializeField] private float jetpackThrust = 10f;
+
         #endregion
 
         private void Start()
@@ -39,7 +41,16 @@ namespace Character
             //Jump
             if (playerS.playerI.isJumpPressed && playerS.isGrounded)
             {
-                Jump();
+                if (playerS.isJetpackOn)
+                {
+                    Thrust();
+                }
+                else
+                {
+                    Jump();
+                }
+
+                
                 
                 playerS.playerI.isJumpPressed = false;
             }
@@ -79,7 +90,10 @@ namespace Character
             playerS.rb2d.velocity = Vector3.up * playerS.jumpSpeed;
            
         }
-
+        internal void Thrust()
+        {
+            playerS.rb2d.AddRelativeForce(Vector2.up * jetpackThrust);
+        }
 
         #endregion
 

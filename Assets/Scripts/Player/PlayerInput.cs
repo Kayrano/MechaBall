@@ -39,6 +39,11 @@ namespace Character
             {
                 _device = DeviceType.PC;
             }
+
+
+            
+
+
         }
 
         private void Update()
@@ -55,11 +60,6 @@ namespace Character
                     break;
             }
 
-
-            
-
-          
-           
         }
 
       
