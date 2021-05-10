@@ -52,16 +52,23 @@ namespace Character
         #region Jetpack
         [SerializeField] GameObject Jetpack;
 
-        public bool isJetpackOn = false;
+        private bool isJetpackOn = false;
+
+        public bool GetJetpackStatus()
+        {
+            return isJetpackOn;
+        }
 
         public void JetpackOn()
         {
             Jetpack.gameObject.SetActive(true);
+            isJetpackOn = true;
         }
 
         public void JetpackOff()
         {
             Jetpack.gameObject.SetActive(false);
+            isJetpackOn = false;
         }
 
         

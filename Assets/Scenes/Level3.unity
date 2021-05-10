@@ -4771,7 +4771,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.13594696, g: 0.3455714, b: 0.4433962, a: 0}
+  m_BackGroundColor: {r: 0.21698111, g: 0.16854653, b: 0.13203096, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4844,12 +4844,12 @@ PrefabInstance:
     - target: {fileID: 409368026337910166, guid: 71557b3632c4d7a41ac83dd84bc1024e,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.5019608
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409368026552234884, guid: 71557b3632c4d7a41ac83dd84bc1024e,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.5019608
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409368027005698092, guid: 71557b3632c4d7a41ac83dd84bc1024e,
         type: 3}
@@ -4969,17 +4969,17 @@ PrefabInstance:
     - target: {fileID: 409368027417554873, guid: 71557b3632c4d7a41ac83dd84bc1024e,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.69803923
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409368028051779138, guid: 71557b3632c4d7a41ac83dd84bc1024e,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.69803923
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409368028135415818, guid: 71557b3632c4d7a41ac83dd84bc1024e,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.5019608
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71557b3632c4d7a41ac83dd84bc1024e, type: 3}
@@ -6753,7 +6753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398890339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.12, y: -6.75, z: 0}
+  m_LocalPosition: {x: 69.12, y: 5.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 851980390}
@@ -6772,7 +6772,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.55101395, y: 12.1544895}
+  m_Offset: {x: -0.30014038, y: 0.13535023}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6783,7 +6783,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8866806, y: 2.3468838}
+  m_Size: {x: 2.3849335, y: 2.7574406}
   m_EdgeRadius: 0
 --- !u!114 &1398890342
 MonoBehaviour:

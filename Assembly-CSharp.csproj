@@ -107,6 +107,7 @@
     <Compile Include="Assets\Prefabs\Powerups\Light_Powerup\Powerup_Light.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Standard_Powerup\Powerup_Standard.cs" />
     <Compile Include="Assets\Prefabs\Teleport\PortalTeleport.cs" />
+    <Compile Include="Assets\Prefabs\Traps\Lasers\Laser.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint1.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint2.cs" />

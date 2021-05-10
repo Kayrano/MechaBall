@@ -18,9 +18,15 @@ public class Jetpack : MonoBehaviour
         
 
         playerS.JetpackOn();
-        playerS.isJetpackOn = true;
+        
 
-        collision.gameObject.transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
+        
+        //rb2d.velocity = new Vector2(0,0);
+
+        rb2d.rotation = 0;
+
+        rb2d.angularVelocity = 0;
+        
 
         rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -28,6 +34,9 @@ public class Jetpack : MonoBehaviour
 
 
         Destroy(gameObject);
+
+
+        
     }
 
 }
