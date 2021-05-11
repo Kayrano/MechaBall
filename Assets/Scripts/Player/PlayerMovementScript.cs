@@ -15,6 +15,14 @@ namespace Character
 
         [SerializeField] private float jetpackThrust = 10f;
 
+
+        #endregion
+
+        #region Jetpack Properties
+
+        private bool isFacingRight = true;
+        
+
         #endregion
 
         private void Start()
@@ -24,8 +32,7 @@ namespace Character
         }
         private void FixedUpdate()
         {
-            playerS.currentSpeed = Mathf.Abs(playerS.rb2d.velocity.x);
-
+            
             //Do Jetpack Movement
             if(playerS.GetJetpackStatus() == true)
             {
@@ -34,11 +41,25 @@ namespace Character
                 {
                     FlyRight();
 
+                    if (!isFacingRight)
+                    {
+                        Flip();
+                    }
+                    
+
                 }
                 //Fly Left
                 if (playerS.playerI.isLeftPressed)
                 {
+
                     FlyLeft();
+
+                    if (isFacingRight)
+                    {
+                        Flip();
+                    }
+                    
+                    
 
                 }
                 //Fly Up
@@ -49,6 +70,7 @@ namespace Character
                     playerS.playerI.isJumpPressed = false;
                 }
 
+                
             }
 
             //Do Basic Movement
@@ -59,12 +81,14 @@ namespace Character
                 if (playerS.playerI.isRightPressed)
                 {
                     MoveRight();
+                    
 
                 }
                 //Move Left
                 if (playerS.playerI.isLeftPressed)
                 {
                     MoveLeft();
+                    
 
                 }
                 //Jump
@@ -76,7 +100,11 @@ namespace Character
                 }
 
             }
-            
+
+
+
+            playerS.currentSpeed = Mathf.Abs(playerS.rb2d.velocity.x);
+
         }
 
 
@@ -113,7 +141,7 @@ namespace Character
 
         internal void Thrust()
         {
-            playerS.rb2d.AddRelativeForce(Vector3.up * jetpackThrust);
+            playerS.rb2d.AddForce(Vector3.up * jetpackThrust);
         }
         internal void FlyRight()
         {
@@ -121,7 +149,6 @@ namespace Character
             Vector3 targetVelocity = new Vector2(playerS.moveSpeed * Time.fixedDeltaTime, playerS.rb2d.velocity.y);
             playerS.rb2d.velocity = Vector3.SmoothDamp(playerS.rb2d.velocity, targetVelocity, ref velocity, .05f);
         }
-
         internal void FlyLeft()
         {
             Vector3 velocity = Vector3.zero;
@@ -129,6 +156,12 @@ namespace Character
             playerS.rb2d.velocity = Vector3.SmoothDamp(playerS.rb2d.velocity, targetVelocity, ref velocity, .05f);
         }
 
+        private void Flip()
+        {
+            isFacingRight = !isFacingRight;
+
+            transform.Rotate(0, 180, 0);
+        }
 
         #endregion
 
