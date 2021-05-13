@@ -22,7 +22,7 @@ public class GameManager : Singleton<GameManager>
 
     public static string firstLevel = "Level1";
 
-    public static string currentLevel = string.Empty;
+    [SerializeField]public static string currentLevel = string.Empty;
 
     public string CurrentLevel
     {

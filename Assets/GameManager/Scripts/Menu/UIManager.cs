@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager>
 
     [SerializeField] private Camera _menuCamera;
 
+    [SerializeField] private LevelSelectionMenu levelSelectionMenu;
     [SerializeField] private MainMenu _mainMenu;
     [SerializeField] private PauseMenu _pauseMenu;
     [SerializeField] private GameOverMenu _gameOverMenu;
@@ -76,6 +77,10 @@ public class UIManager : Singleton<UIManager>
 
         Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
 
+        levelSelectionMenu.CheckLevels();
+
+        PlayerPrefs.Save();
+
     }
 
     void HandleCheckpoint2Achieved(int currentLevel)
@@ -89,6 +94,10 @@ public class UIManager : Singleton<UIManager>
         }
 
         Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+
+        levelSelectionMenu.CheckLevels();
+
+        PlayerPrefs.Save();
 
     }
 
@@ -104,6 +113,9 @@ public class UIManager : Singleton<UIManager>
 
         Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
 
+        levelSelectionMenu.CheckLevels();
+
+        PlayerPrefs.Save();
     }
 
     #endregion
