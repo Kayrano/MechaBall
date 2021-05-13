@@ -1,27 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Character;
 
 public class Laser : MonoBehaviour
 {
-    private LineRenderer _lineRenderer;
 
-    private void Start()
+    private float targetTime;
+    private bool timerEnded = true;
+
+    private void Update()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
+        if (timerEnded) { return; }
+
+        targetTime -= Time.deltaTime;
+        if (targetTime <= 0.0f)
+            timerEnded = true;
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        _lineRenderer.SetPosition(0, transform.position);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-        if (hit.collider)
-        {
-            _lineRenderer.SetPosition(1, new Vector3(hit.point.x, hit.point.y, transform.position.z));
-        }
-        else
-        {
-            _lineRenderer.SetPosition(1, transform.up * 2000);
-        }
+        if (!collision.gameObject.CompareTag("Player")) { return; }
+
+        if (!timerEnded) { return; }
+
+        PlayerScript playerS = collision.gameObject.GetComponent<PlayerScript>();
+
+        Debug.Log("Laser triggered with player!!!");
+        playerS.playerH.TakeDamage();
+
+        targetTime = 0.5f;
+        timerEnded = false;
+
+
     }
+
+
+
 }

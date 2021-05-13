@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Checkpoint3 : MonoBehaviour
 {
+    public static event Events.CheckpointAchieved Checkpoint3Achieved;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("Player")) { return; }
 
+        Checkpoint3Achieved.Invoke(3);
 
-        GameManager.Instance.UnLoadLevel(GameData.currentLevel);
+        GameManager.Instance.UnLoadLevel(GameManager.currentLevel);
 
-        GameData.currentLevel = "Level4";
+        GameManager.currentLevel = "Level4";
 
-        GameManager.Instance.LoadLevel(GameData.currentLevel);
+        GameManager.Instance.LoadLevel(GameManager.currentLevel);
     }
 
 }

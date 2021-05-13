@@ -23,6 +23,8 @@ namespace Character
         #endregion
 
         #region Input Conditions
+        private bool isDead = false;
+
         internal bool isRightPressed;
         internal bool isLeftPressed;
         internal bool isJumpPressed;
@@ -40,14 +42,22 @@ namespace Character
                 _device = DeviceType.PC;
             }
 
+            PlayerScript.OnDie += HandleOnDie;
 
             
-
-
         }
+
+
+        void HandleOnDie()
+        {
+            isDead = true;
+        }
+
 
         private void Update()
         {
+            if (isDead) { return; }
+
             switch (_device)
             {
                 case DeviceType.PC:

@@ -54,6 +54,8 @@ namespace Character
 
         private bool isJetpackOn = false;
 
+        
+
         public bool GetJetpackStatus()
         {
             return isJetpackOn;
@@ -63,6 +65,15 @@ namespace Character
         {
             Jetpack.gameObject.SetActive(true);
             isJetpackOn = true;
+
+            rb2d.rotation = 0;
+
+            rb2d.angularVelocity = 0;
+
+            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+
+
         }
 
         public void JetpackOff()

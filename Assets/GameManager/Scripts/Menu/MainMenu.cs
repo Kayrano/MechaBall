@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     // Functions to play fade in/out
 
     [SerializeField] private Button playButton;
+    [SerializeField] private Button quitButton;
+
     [SerializeField] private Animation _mainMenuAnimator;
     [SerializeField] private AnimationClip _fadeOutAnim;
     [SerializeField] private AnimationClip _fadeInAnim;
@@ -21,13 +23,21 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
+
         playButton.onClick.AddListener(HandlePlayButtonClicked);
+
+        quitButton.onClick.AddListener(HandleQuitButtonClicked);
 
     }
 
     private void HandlePlayButtonClicked()
     {
         GameManager.Instance.StartGame();
+    }
+
+    private void HandleQuitButtonClicked()
+    {
+        GameManager.Instance.QuitGame();
     }
 
     private void HandleGameStateChanged(GameManager.GameState currentState, GameManager.GameState previousState)

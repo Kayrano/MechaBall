@@ -67,6 +67,7 @@
     <Compile Include="Assets\GameManager\Scripts\GameManager.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\GameOverMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\GameplayUI.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\LevelSelectionMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\OptionsMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\PauseMenu.cs" />
@@ -113,7 +114,6 @@
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint2.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint3.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
-    <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\Platforms\LavaScript.cs" />
     <Compile Include="Assets\Scripts\Platforms\PathFollow.cs" />
     <Compile Include="Assets\Scripts\Platforms\WaterEffect.cs" />

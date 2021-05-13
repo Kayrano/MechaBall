@@ -18,8 +18,21 @@ public class GameManager : Singleton<GameManager>
         RETRY
     }
 
+    #region Level System
+
+    public static string firstLevel = "Level1";
+
+    public static string currentLevel = string.Empty;
+
+    public string CurrentLevel
+    {
+        get { return currentLevel; }
+    }
+
+
     
-    
+
+    #endregion
 
     public GameObject[] SystemPrefabs;
     public Events.EventGameState OnGameStateChanged;
@@ -65,7 +78,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!fadeOut)
         {
-            UnLoadLevel(GameData.currentLevel);
+            UnLoadLevel(currentLevel);
         }
     }
 
@@ -148,7 +161,7 @@ public class GameManager : Singleton<GameManager>
         ao.completed += OnLoadOperationComplete;
         _loadOperations.Add(ao);
         
-        GameData.currentLevel = levelName;
+        currentLevel = levelName;
     }
     public void UnLoadLevel(string levelName)
     {
@@ -189,8 +202,8 @@ public class GameManager : Singleton<GameManager>
     public void Retry()
     {
         UpdateState(GameState.RETRY);
-        UnLoadLevel(GameData.currentLevel);
-        LoadLevel(GameData.currentLevel);
+        UnLoadLevel(currentLevel);
+        LoadLevel(currentLevel);
 
     }
 

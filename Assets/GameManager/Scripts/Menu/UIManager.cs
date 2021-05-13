@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class UIManager : Singleton<UIManager>
@@ -20,8 +21,12 @@ public class UIManager : Singleton<UIManager>
     {
         _mainMenu.OnMainMenuFadeComplete.AddListener(HandleMainMenuFadeComplete);
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
-        
-        
+
+        Checkpoint1.Checkpoint1Achieved += HandleCheckpoint1Achieved;
+        Checkpoint2.Checkpoint2Achieved += HandleCheckpoint2Achieved;
+        Checkpoint3.Checkpoint3Achieved += HandleCheckpoint3Achieved;
+
+
     }
 
     private void Update()
@@ -49,15 +54,63 @@ public class UIManager : Singleton<UIManager>
 
         _gameOverMenu.gameObject.SetActive(currentState == GameManager.GameState.DEAD);
 
-
-
     }
 
     public void SetMenuCameraActive(bool active)
     {
         _menuCamera.gameObject.SetActive(active);
-    } 
-    
+    }
 
-    
+
+    #region Checkpoint Methods
+
+    void HandleCheckpoint1Achieved(int currentLevel)
+    {
+        Debug.Log("[UIMANAGER]Checkpoint Event activated");
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+        }
+
+        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+
+    }
+
+    void HandleCheckpoint2Achieved(int currentLevel)
+    {
+        Debug.Log("[UIMANAGER]Checkpoint Event activated");
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+        }
+
+        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+
+    }
+
+    void HandleCheckpoint3Achieved(int currentLevel)
+    {
+        Debug.Log("[UIMANAGER]Checkpoint Event activated");
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+        }
+
+        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+
+    }
+
+    #endregion
+
+
+
+
+
+
 }
