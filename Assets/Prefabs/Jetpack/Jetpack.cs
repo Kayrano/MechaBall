@@ -6,6 +6,9 @@ using Character;
 public class Jetpack : MonoBehaviour
 {
     PlayerScript playerS = null;
+    
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,14 +16,10 @@ public class Jetpack : MonoBehaviour
 
         playerS = collision.GetComponent<PlayerScript>();
 
-
         playerS.JetpackOn();
 
-        
         Destroy(gameObject);
 
-
-        
     }
 
 

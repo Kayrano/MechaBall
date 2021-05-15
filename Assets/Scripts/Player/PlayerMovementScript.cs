@@ -14,7 +14,10 @@ namespace Character
         #region Properties
 
         [SerializeField] private float jetpackThrust = 10f;
+        
+        
 
+        Rigidbody2D rb2d;
 
         #endregion
 
@@ -29,6 +32,7 @@ namespace Character
         {
             playerS = GetComponent<PlayerScript>();
             print("Player Movement Initialized");
+            rb2d = playerS.rb2d;
         }
         private void FixedUpdate()
         {

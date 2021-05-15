@@ -9,21 +9,23 @@ namespace camera
     {
         public Transform target;
 
-        public float smoothspeed = 0.5f;
+        public bool isJetpackOn = false;
 
-        private void Start()
-        {
-          
-            
-
-
-        }
         private void LateUpdate()
         {
-            if(target.position.x > transform.position.x /2)
-                transform.position = new Vector3(target.position.x , transform.position.y, 0) * smoothspeed;
+            if (isJetpackOn)
+            {
 
-           
+                if (target.position.x > transform.position.x / 2)
+                    transform.position = new Vector3(target.position.x, target.position.y, 0);
+
+            }
+            else
+            {
+                if (target.position.x > transform.position.x / 2)
+                    transform.position = new Vector3(target.position.x, transform.position.y, 0);
+            }
+
         }
 
     }

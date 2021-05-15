@@ -301,6 +301,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.render-pipelines.core@7.5.3/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

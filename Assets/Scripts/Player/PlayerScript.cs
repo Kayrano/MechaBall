@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using camera;
 
 
 namespace Character
@@ -22,6 +23,7 @@ namespace Character
         internal Rigidbody2D rb2d;
         internal Collider2D playerCollider;
 
+        [SerializeField]internal Camera mainCamera;
 
         #endregion
 
@@ -71,6 +73,13 @@ namespace Character
             rb2d.angularVelocity = 0;
 
             rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            rb2d.drag = 0.7f;
+
+            CameraFollow cameraFollow = mainCamera.GetComponent<CameraFollow>();
+
+            cameraFollow.isJetpackOn = true;
+
 
 
 
