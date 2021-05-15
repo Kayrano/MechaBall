@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PathFollow : MonoBehaviour
 {
-    [SerializeField] List<Vector3> patrolPoints = new List<Vector3>();
+    [SerializeField] internal List<Vector3> patrolPoints = new List<Vector3>();
     [SerializeField] private float speed;
     [SerializeField] private int nextPoint = 0;
 

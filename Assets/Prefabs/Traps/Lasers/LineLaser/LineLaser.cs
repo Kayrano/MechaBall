@@ -20,6 +20,8 @@ public class LineLaser : MonoBehaviour
         ShootLaser();
     }
 
+
+
     void ShootLaser()
     {
         if(Physics2D.Raycast(m_transform.position, transform.up))
