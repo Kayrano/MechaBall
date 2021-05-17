@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7490313580387700258}
   - component: {fileID: 7490313580387700285}
   - component: {fileID: 7490313580387700256}
-  - component: {fileID: -4567726675486465592}
+  - component: {fileID: 4448950837182584748}
   m_Layer: 0
   m_Name: SpikyMineDevil
   m_TagString: Untagged
@@ -202,7 +202,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4567726675486465592
+--- !u!114 &4448950837182584748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,6 +211,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7490313580387700257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ccae3060aa54549bb0b829700ca818, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a7ad1aeb0e914441b86de5f9ed935b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -13,5 +13,8 @@ public class EnemyTrigger : MonoBehaviour
 
         enemyToActivate.SetActive(true);
 
+
+        Collider2D boxCollider = this.GetComponent<Collider2D>();
+        boxCollider.enabled = false;
     }
 }

@@ -8,7 +8,14 @@ public class LineLaser : MonoBehaviour
     [SerializeField] private float defDistanceRay = 180;
     public Transform laserFirePoint;
     public LineRenderer m_lineRenderer;
+    public ContactFilter2D filter;
+
+    [SerializeField] Material hitMaterial;
+    [SerializeField] Material defaultMaterial;
+
     Transform m_transform;
+
+    RaycastHit2D[] raycastHit2Dresults;
 
     private float targetTime;
     private bool timerEnded = true;
@@ -16,6 +23,7 @@ public class LineLaser : MonoBehaviour
 
     private void Start()
     {
+        defaultMaterial = m_lineRenderer.material;
         m_transform = GetComponent<Transform>();
     }
 
@@ -36,10 +44,13 @@ public class LineLaser : MonoBehaviour
     {
         if(Physics2D.Raycast(m_transform.position, transform.up))
         {
-            RaycastHit2D _hit = Physics2D.Raycast(m_transform.position, transform.up);
+            RaycastHit2D _hit = Physics2D.Raycast(laserFirePoint.position, transform.up);
             Draw2DRay(laserFirePoint.position, _hit.point);
+
             if (_hit.collider.CompareTag("Player"))
             {
+                m_lineRenderer.material = hitMaterial;
+
                 if (!timerEnded) { return; }
 
                 PlayerHealth playerH = _hit.collider.GetComponent<PlayerHealth>();
@@ -47,9 +58,16 @@ public class LineLaser : MonoBehaviour
                 Debug.Log("Laser Collided with player!!!" + _hit.collider.name);
                 playerH.TakeDamage();
 
-                targetTime = 1.2f;
+                targetTime = 1f;
                 timerEnded = false;
+
             }
+            else if (!_hit.collider.CompareTag("Player"))
+            {
+                m_lineRenderer.material = defaultMaterial;
+            }
+
+            
         }
         else
         {
