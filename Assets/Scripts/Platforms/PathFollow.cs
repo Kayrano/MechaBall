@@ -6,7 +6,7 @@ public class PathFollow : MonoBehaviour
 {
     [SerializeField] internal List<Vector3> patrolPoints = new List<Vector3>();
     [SerializeField] private float speed;
-    [SerializeField] private int nextPoint = 0;
+    [SerializeField] internal int nextPoint = 0;
 
     
     private void Update()

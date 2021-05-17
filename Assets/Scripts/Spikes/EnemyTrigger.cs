@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyToActivate;
+    [SerializeField] internal GameObject enemyToActivate;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

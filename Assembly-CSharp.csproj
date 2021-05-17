@@ -104,6 +104,7 @@
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\ImportedAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Prefabs\Jetpack\Jetpack.cs" />
+    <Compile Include="Assets\Prefabs\Jetpack\JetpackOff.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Heavy_Powerup\Powerup_Heavy.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Light_Powerup\Powerup_Light.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Standard_Powerup\Powerup_Standard.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint1.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint2.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint3.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\Checkpoint4.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
     <Compile Include="Assets\Scripts\Platforms\LavaScript.cs" />
     <Compile Include="Assets\Scripts\Platforms\PathFollow.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\Spikes\DevilSpiky\DevilSpikeyMine.cs" />
+    <Compile Include="Assets\Scripts\Spikes\DevilSpiky\SuicideDevilSpikyMine.cs" />
     <Compile Include="Assets\Scripts\Spikes\EnemyTrigger.cs" />
     <Compile Include="Assets\Scripts\Spikes\SpikeScript.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

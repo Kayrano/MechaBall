@@ -26,6 +26,7 @@ public class UIManager : Singleton<UIManager>
         Checkpoint1.Checkpoint1Achieved += HandleCheckpoint1Achieved;
         Checkpoint2.Checkpoint2Achieved += HandleCheckpoint2Achieved;
         Checkpoint3.Checkpoint3Achieved += HandleCheckpoint3Achieved;
+        Checkpoint4.Checkpoint4Achieved += HandleCheckpoint4Achieved;
 
 
     }
@@ -102,6 +103,23 @@ public class UIManager : Singleton<UIManager>
     }
 
     void HandleCheckpoint3Achieved(int currentLevel)
+    {
+        Debug.Log("[UIMANAGER]Checkpoint Event activated");
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+        }
+
+        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+
+        levelSelectionMenu.CheckLevels();
+
+        PlayerPrefs.Save();
+    }
+
+    void HandleCheckpoint4Achieved(int currentLevel)
     {
         Debug.Log("[UIMANAGER]Checkpoint Event activated");
 

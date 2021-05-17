@@ -72,16 +72,10 @@ namespace Character
 
             rb2d.angularVelocity = 0;
 
-            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
-
             rb2d.drag = 0.7f;
 
-            CameraFollow cameraFollow = mainCamera.GetComponent<CameraFollow>();
-
-            cameraFollow.isJetpackOn = true;
-
-
-
+            if (rb2d.rotation == 0)
+                rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         }
 
@@ -89,6 +83,11 @@ namespace Character
         {
             Jetpack.gameObject.SetActive(false);
             isJetpackOn = false;
+
+            rb2d.constraints = RigidbodyConstraints2D.None;
+
+            rb2d.drag = 0;
+
         }
 
         

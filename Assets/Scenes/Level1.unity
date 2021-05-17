@@ -9011,6 +9011,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420034}
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
@@ -9039,8 +9040,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718590584e1caca498d0a8b2d8d6e6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 673070316}
-  smoothspeed: 1
+  target: {fileID: 4415833138570925233}
+  startCameraYPosition: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -9098,22 +9099,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &519420033
-Rigidbody:
+--- !u!50 &519420033
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  serializedVersion: 2
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
   m_Mass: 1
-  m_Drag: 0
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_Constraints: 124
+  m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &545865818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3258909487797594304, guid: fc31aa0c3e861da4898e86b3c2042ba9,
@@ -9200,12 +9237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841165dfb1baf74bb93a09474199c41, type: 3}
---- !u!4 &673070316 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7411205790041614450, guid: 1c23973b5821fa54f824b948cfa89c0c,
-    type: 3}
-  m_PrefabInstance: {fileID: 4415833138570925232}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &732706487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3258909487797594304, guid: fc31aa0c3e861da4898e86b3c2042ba9,
@@ -10026,8 +10057,8 @@ EdgeCollider2D:
   - {x: -2.389573, y: 6.088773}
   - {x: -2.0981653, y: 6.061055}
   - {x: -1.8007797, y: 6.0115805}
-  - {x: -1.5002933, y: 5.941696}
-  - {x: -1.1980901, y: 5.8527994}
+  - {x: -1.5002931, y: 5.941696}
+  - {x: -1.1980903, y: 5.8527994}
   - {x: -0.89559853, y: 5.7464113}
   - {x: -0.2955017, y: 5.4877796}
   - {x: 0.28870672, y: 5.1797285}
@@ -10036,7 +10067,7 @@ EdgeCollider2D:
   - {x: 1.839882, y: 4.108149}
   - {x: 2.6200304, y: 3.4518251}
   - {x: 3.8830872, y: 2.33001}
-  - {x: 6.102768, y: 0.30219114}
+  - {x: 6.102768, y: 0.30219108}
   - {x: 6.987168, y: -0.49336982}
   - {x: 7.8481617, y: -1.2442021}
   - {x: 8.329435, y: -1.643796}
@@ -10765,8 +10796,8 @@ EdgeCollider2D:
   - {x: -12.759607, y: -2.8009593}
   - {x: -12.035763, y: -2.2124891}
   - {x: -11.35126, y: -1.6108059}
-  - {x: -10.730787, y: -1.0297276}
-  - {x: -9.9734955, y: -0.27098316}
+  - {x: -10.730787, y: -1.0297277}
+  - {x: -9.9734955, y: -0.2709832}
   - {x: -8.737043, y: 1.0721292}
   - {x: -7.890483, y: 1.9543726}
   - {x: -5.81944, y: 4.046985}
@@ -10785,9 +10816,9 @@ EdgeCollider2D:
   - {x: 2.294774, y: 2.673174}
   - {x: 3.0629084, y: 1.8575766}
   - {x: 4.000853, y: 0.9291056}
-  - {x: 4.9610977, y: 0.11879629}
-  - {x: 5.9407806, y: -0.5029956}
-  - {x: 6.8911386, y: -0.8640905}
+  - {x: 4.9610977, y: 0.11879632}
+  - {x: 5.9407806, y: -0.50299543}
+  - {x: 6.8911386, y: -0.86409044}
   - {x: 6.9484825, y: -0.8908247}
   - {x: 7.7633924, y: -0.9604733}
   - {x: 7.9928493, y: -0.9872805}
@@ -10795,7 +10826,7 @@ EdgeCollider2D:
   - {x: 9.119236, y: -0.7394705}
   - {x: 9.430853, y: -0.56548774}
   - {x: 10.369308, y: -0.061605334}
-  - {x: 11.017647, y: 0.5028713}
+  - {x: 11.017647, y: 0.50287116}
   - {x: 11.755997, y: 1.1389229}
 --- !u!252 &1591510552
 SurfaceEffector2D:
@@ -11692,6 +11723,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c23973b5821fa54f824b948cfa89c0c, type: 3}
+--- !u!4 &4415833138570925233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7251986212422518083, guid: 1c23973b5821fa54f824b948cfa89c0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4415833138570925232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7478473694916667027
 PrefabInstance:
   m_ObjectHideFlags: 0
