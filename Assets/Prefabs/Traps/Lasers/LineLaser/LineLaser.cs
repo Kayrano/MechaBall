@@ -62,7 +62,12 @@ public class LineLaser : MonoBehaviour
                 timerEnded = false;
 
             }
-            else if (!_hit.collider.CompareTag("Player"))
+            else if (_hit.collider.CompareTag("DevilSpikyMine"))
+            {
+                m_lineRenderer.material = hitMaterial;
+                Destroy(_hit.collider.gameObject,0.35f);
+            }
+            else if (!_hit.collider.CompareTag("Player") & !_hit.collider.CompareTag("DevilSpikyMine"))
             {
                 m_lineRenderer.material = defaultMaterial;
             }

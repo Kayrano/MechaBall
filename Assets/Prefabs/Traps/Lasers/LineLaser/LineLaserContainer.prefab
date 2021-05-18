@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 611543640}
   m_Layer: 0
   m_Name: LineLaserContainer
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,5 +326,19 @@ MonoBehaviour:
   defDistanceRay: 90
   laserFirePoint: {fileID: 5274941638980345830}
   m_lineRenderer: {fileID: 6968509118023902828}
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   hitMaterial: {fileID: 2100000, guid: 6e3b995103a67e84ca3aed9b84b946f4, type: 2}
   defaultMaterial: {fileID: 0}

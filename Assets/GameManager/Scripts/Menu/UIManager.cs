@@ -27,6 +27,7 @@ public class UIManager : Singleton<UIManager>
         Checkpoint2.Checkpoint2Achieved += HandleCheckpoint2Achieved;
         Checkpoint3.Checkpoint3Achieved += HandleCheckpoint3Achieved;
         Checkpoint4.Checkpoint4Achieved += HandleCheckpoint4Achieved;
+        Checkpoint5.Checkpoint5Achieved += HandleCheckpoint5Achieved;
 
 
     }
@@ -76,7 +77,7 @@ public class UIManager : Singleton<UIManager>
             PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
         }
 
-        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+        Debug.Log("Level2" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
 
         levelSelectionMenu.CheckLevels();
 
@@ -94,7 +95,7 @@ public class UIManager : Singleton<UIManager>
             PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
         }
 
-        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+        Debug.Log("Leve3" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
 
         levelSelectionMenu.CheckLevels();
 
@@ -112,7 +113,7 @@ public class UIManager : Singleton<UIManager>
             PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
         }
 
-        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+        Debug.Log("Leve4" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
 
         levelSelectionMenu.CheckLevels();
 
@@ -129,7 +130,24 @@ public class UIManager : Singleton<UIManager>
             PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
         }
 
-        Debug.Log("Level" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+        Debug.Log("Leve5" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
+
+        levelSelectionMenu.CheckLevels();
+
+        PlayerPrefs.Save();
+    }
+
+    void HandleCheckpoint5Achieved(int currentLevel)
+    {
+        Debug.Log("[UIMANAGER]Checkpoint Event activated");
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+        }
+
+        Debug.Log("Leve6" + PlayerPrefs.GetInt("levelsUnlocked") + "Unlocked");
 
         levelSelectionMenu.CheckLevels();
 

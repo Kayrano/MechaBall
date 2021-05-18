@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint2.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint3.cs" />
     <Compile Include="Assets\Scripts\Checkpoints\Checkpoint4.cs" />
+    <Compile Include="Assets\Scripts\Checkpoints\Checkpoint5.cs" />
     <Compile Include="Assets\Scripts\Coin\CoinsCript.cs" />
     <Compile Include="Assets\Scripts\Platforms\LavaScript.cs" />
     <Compile Include="Assets\Scripts\Platforms\PathFollow.cs" />

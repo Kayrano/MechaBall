@@ -38,16 +38,6 @@ public class DevilSpikeyMine : MonoBehaviour
 
         }
 
-        else if (collision.gameObject.CompareTag("Laser"))
-        {
-
-            // Do die and particle blowing up effects
-
-        }
-        
-
-
-
     }
 
 }

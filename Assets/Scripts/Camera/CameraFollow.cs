@@ -7,6 +7,8 @@ namespace camera
 {
     public class CameraFollow : MonoBehaviour
     {
+        
+        [SerializeField] int jetpackCameraSize = 12;
         public Transform target;
         [SerializeField] private float startCameraYPosition;
         Rigidbody2D rb2dCamera;
@@ -16,6 +18,7 @@ namespace camera
 
         private void Start()
         {
+            
             startCameraYPosition = transform.position.y;
             rb2dCamera = GetComponent<Rigidbody2D>();
             playerS = target.GetComponent<PlayerScript>();
@@ -30,6 +33,10 @@ namespace camera
                 rb2dCamera.constraints = RigidbodyConstraints2D.None;
 
                 transform.position = new Vector3(target.position.x, target.position.y, 0);
+
+                Camera.main.orthographicSize = jetpackCameraSize;
+
+                
 
             }
             else if(!playerS.GetJetpackStatus())
