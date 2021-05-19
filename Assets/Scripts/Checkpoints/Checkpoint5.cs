@@ -10,8 +10,15 @@ public class Checkpoint5 : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player")) { return; }
 
+        this.GetComponent<AudioSource>().PlayOneShot(this.GetComponent<AudioSource>().clip);
+
         Checkpoint5Achieved.Invoke(5);
 
+        Invoke("NextLevel", 1f);
+    }
+
+    void NextLevel()
+    {
         GameManager.Instance.UnLoadLevel(GameManager.currentLevel);
 
         GameManager.currentLevel = "Level6";

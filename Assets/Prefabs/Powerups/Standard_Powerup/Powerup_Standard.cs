@@ -11,6 +11,11 @@ public class Powerup_Standard : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player")) { return; }
 
+        this.GetComponent<Collider2D>().enabled = false;
+        this.GetComponent<SpriteRenderer>().enabled = false;
+
+        this.GetComponent<AudioSource>().PlayOneShot(this.GetComponent<AudioSource>().clip);
+
         Rigidbody2D rb2d = collision.gameObject.GetComponent<Rigidbody2D>();
 
         Renderer[] renderer = collision.gameObject.GetComponentsInChildren<Renderer>();
@@ -21,7 +26,8 @@ public class Powerup_Standard : MonoBehaviour
 
         Debug.Log("STANDARD POWERUP USED!");
 
-        Destroy(this.gameObject);
+
+        Destroy(this.gameObject,2f);
 
     }
 }

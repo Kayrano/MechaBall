@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Character;
+using UnityEngine.Audio;
 
 public class LineLaser : MonoBehaviour
 {
@@ -62,11 +63,15 @@ public class LineLaser : MonoBehaviour
                 timerEnded = false;
 
             }
+
             else if (_hit.collider.CompareTag("DevilSpikyMine"))
             {
                 m_lineRenderer.material = hitMaterial;
-                Destroy(_hit.collider.gameObject,0.35f);
+
+                _hit.collider.GetComponent<DevilSpikeyMine>().Explode();
+                
             }
+
             else if (!_hit.collider.CompareTag("Player") & !_hit.collider.CompareTag("DevilSpikyMine"))
             {
                 m_lineRenderer.material = defaultMaterial;

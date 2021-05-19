@@ -13,6 +13,7 @@ namespace Character
         PlayerScript playerS;
         #endregion
 
+        
         private void Start()
         {
             playerS = GetComponent<PlayerScript>();
@@ -21,6 +22,7 @@ namespace Character
         private void FixedUpdate()
         {
             playerS.isGrounded = Physics2D.OverlapCircle(playerS.groundCheckPoint.position, playerS.checkRadius, playerS.groundLayer);
+            
         }
 
 

@@ -31,8 +31,11 @@ public class CoinsCript : MonoBehaviour
 
     public void CollectCoin()
     {
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        this.GetComponent<Collider2D>().enabled = false;
+        this.GetComponent<AudioSource>().PlayOneShot(this.GetComponent<AudioSource>().clip);
         playerS.currentCoins += 1 ;
         current_coin_text.text = playerS.currentCoins.ToString();
-        Destroy(gameObject);
+        Destroy(gameObject,5f);
     }
 }

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using Character;
 using UnityEngine;
+using Pathfinding;
 
 public class DevilSpikeyMine : MonoBehaviour
 {
 
     private float targetTime;
     private bool timerEnded = true;
-
+    [SerializeField] internal GameObject explosionPrefab;
+    [SerializeField] internal AudioClip explosionSound;
     
 
 
@@ -39,5 +41,22 @@ public class DevilSpikeyMine : MonoBehaviour
         }
 
     }
+
+
+    public void Explode()
+    {
+        gameObject.GetComponent<Collider2D>().enabled = false;
+
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        Instantiate(explosionPrefab, transform);
+
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(explosionSound);
+
+        this.gameObject.GetComponent<AIPath>().canMove = false;
+
+        Destroy(this.gameObject, 2f);
+    }
+
 
 }

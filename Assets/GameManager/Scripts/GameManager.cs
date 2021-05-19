@@ -42,6 +42,7 @@ public class GameManager : Singleton<GameManager>
     List<AsyncOperation> _loadOperations;
     GameState _currentGameState = GameState.PREGAME;
 
+
     
 
     public GameState CurrentGameState
@@ -52,6 +53,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        Application.targetFrameRate = 144;
 
         DontDestroyOnLoad(gameObject);
 

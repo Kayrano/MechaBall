@@ -68,13 +68,13 @@ namespace Character
             Jetpack.gameObject.SetActive(true);
             isJetpackOn = true;
 
-            rb2d.rotation = 0;
+            rb2d.rotation = 360;
 
             rb2d.angularVelocity = 0;
 
             rb2d.drag = 0.7f;
 
-            if (rb2d.rotation == 0)
+            if (rb2d.rotation == 360)
                 rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         }
@@ -91,8 +91,6 @@ namespace Character
         }
 
         
-
-
         #endregion
 
 
@@ -127,6 +125,10 @@ namespace Character
         {
             if (isDead)
             {
+
+                OnDied();
+
+
                 if (!hasEnded)
                 {
                     OnDie.Invoke();
@@ -136,6 +138,21 @@ namespace Character
                     
 
             }
+        }
+
+
+        void OnDied()
+        {
+            rb2d.velocity = new Vector2(0, 0);
+            moveSpeed = 0;
+
+            Collider2D[] colliders = this.gameObject.GetComponents<Collider2D>();
+
+            foreach (var collider in colliders) 
+            {
+                collider.enabled = false;
+            }
+
         }
 
 

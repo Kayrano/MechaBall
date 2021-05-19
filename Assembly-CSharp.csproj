@@ -731,6 +731,9 @@
     <Reference Include="Unity.Burst">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -769,6 +772,9 @@
     </Reference>
     <Reference Include="Unity.Build.SlimPlayerRuntime">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.Build.SlimPlayerRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Kayra/OneDrive/Belgeler/OrangeBall/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
