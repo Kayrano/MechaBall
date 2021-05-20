@@ -8,13 +8,6 @@ public class WaterEffect : MonoBehaviour
 
     AudioSource source;
 
-    
-    
-
-    [SerializeField] float targetTime;
-    [SerializeField] bool timerEnded = true;
-    [SerializeField] bool triggered = false;
-
     private void Start()
     {
         source = GetComponent<AudioSource>();
