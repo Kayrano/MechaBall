@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -833,7 +833,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3267131271952b340afcd0b58c1ae506, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -61768,6 +61768,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1138393213}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1344195237 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2420409679300816616, guid: 1c23973b5821fa54f824b948cfa89c0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1624531074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1348769231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62800,7 +62806,7 @@ PrefabInstance:
     - target: {fileID: 4642693303809411492, guid: 1c23973b5821fa54f824b948cfa89c0c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6709472944440175544, guid: 1c23973b5821fa54f824b948cfa89c0c,
         type: 3}
@@ -62840,12 +62846,12 @@ PrefabInstance:
     - target: {fileID: 7251986212422518083, guid: 1c23973b5821fa54f824b948cfa89c0c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.56
+      value: 15.36
       objectReference: {fileID: 0}
     - target: {fileID: 7251986212422518083, guid: 1c23973b5821fa54f824b948cfa89c0c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.79
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 7251986212422518083, guid: 1c23973b5821fa54f824b948cfa89c0c,
         type: 3}
@@ -63088,6 +63094,36 @@ MonoBehaviour:
   - {fileID: 62761130}
   - {fileID: 1680215376}
   - {fileID: 1133178034}
+--- !u!1 &1723924447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723924448}
+  m_Layer: 0
+  m_Name: Flame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1723924448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723924447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1344195237}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1762938512
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -116,9 +116,6 @@ namespace Character
         {
             currentHealth = maximumHealth;
             
-           
-            
-            
         }
 
         private void Update()

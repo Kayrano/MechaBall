@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7087,7 +7087,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3267131271952b340afcd0b58c1ae506, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7383,7 +7383,6 @@ GameObject:
   - component: {fileID: 1624010484}
   - component: {fileID: 1624010489}
   - component: {fileID: 1624010491}
-  - component: {fileID: 1624010490}
   m_Layer: 4
   m_Name: WaterLevel
   m_TagString: Untagged
@@ -7518,12 +7517,12 @@ CompositeCollider2D:
       - {x: 10.0585785, y: 1}
       - {x: 14, y: 0.94142133}
     - - {x: 66.94142, y: -8}
-      - {x: 66.94142, y: -0.00001}
-      - {x: 57, y: -0.0585886}
+      - {x: 66.94142, y: 0}
+      - {x: 57, y: -0.0585786}
       - {x: 56.94142, y: -3}
       - {x: 49, y: -2.9414213}
-      - {x: 48.94142, y: -0.00001}
-      - {x: 37, y: -0.0585886}
+      - {x: 48.94142, y: 0}
+      - {x: 37, y: -0.0585786}
       - {x: 36.94142, y: -3}
       - {x: 30, y: -2.9414213}
       - {x: 29.941422, y: 0}
@@ -7539,10 +7538,10 @@ CompositeCollider2D:
       - {x: -10.0585785, y: -3}
       - {x: -14, y: -3.0585787}
       - {x: -13.941421, y: -8}
-    - - {x: 61.000015, y: -4.941426}
-      - {x: 57.99999, y: -4.941425}
-      - {x: 58.058575, y: -3.99999}
-      - {x: 61.000015, y: -4.0585747}
+    - - {x: 61, y: -4.941421}
+      - {x: 58, y: -4.941421}
+      - {x: 58.05858, y: -4}
+      - {x: 61, y: -4.058579}
     - - {x: 17, y: -4.941421}
       - {x: 14, y: -4.941421}
       - {x: 14.058579, y: -4}
@@ -12894,22 +12893,6 @@ AreaEffector2D:
   m_ForceTarget: 1
   m_Drag: 8
   m_AngularDrag: 0
---- !u!114 &1624010490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624010482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 986a42c558ca6514292ab3b6e6b7af88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropClip: {fileID: 8300000, guid: 8dbce0f035b4841428fa172159ae85f7, type: 3}
-  targetTime: 0
-  timerEnded: 1
-  triggered: 0
 --- !u!82 &1624010491
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12921,9 +12904,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: a7855b0cac0ce904fb325ca54d55cec4,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: a6fbae7013d7bda478ff28750cce3630, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_audioClip: {fileID: 8300000, guid: e5a03705e895a2a4aa59248a18663ea5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0

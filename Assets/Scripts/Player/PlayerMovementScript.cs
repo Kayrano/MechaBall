@@ -109,6 +109,7 @@ namespace Character
 
             playerS.currentSpeed = Mathf.Abs(playerS.rb2d.velocity.x);
 
+            
         }
 
 
