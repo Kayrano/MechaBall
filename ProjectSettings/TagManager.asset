@@ -53,6 +53,9 @@ TagManager:
   - name: BasePlatform
     uniqueID: 2139628265
     locked: 0
+  - name: FogPlatform
+    uniqueID: 45579025
+    locked: 0
   - name: Player
     uniqueID: 4123867403
     locked: 0

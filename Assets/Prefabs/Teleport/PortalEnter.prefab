@@ -123,3 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalExit: {fileID: 0}
   player: {fileID: 0}
+  id: 0
+  audioSource: {fileID: 0}

@@ -110,6 +110,7 @@
     <Compile Include="Assets\Prefabs\Powerups\Light_Powerup\Powerup_Light.cs" />
     <Compile Include="Assets\Prefabs\Powerups\Standard_Powerup\Powerup_Standard.cs" />
     <Compile Include="Assets\Prefabs\Teleport\PortalTeleport.cs" />
+    <Compile Include="Assets\Prefabs\Teleport\PortalTeleportExit.cs" />
     <Compile Include="Assets\Prefabs\Traps\Lasers\Laser.cs" />
     <Compile Include="Assets\Prefabs\Traps\Lasers\LineLaser\LineLaser.cs" />
     <Compile Include="Assets\Prefabs\Traps\Lasers\LineLaser\LineLaserTriggerSpawn.cs" />
