@@ -23,7 +23,10 @@ namespace Character
 
         #region Jetpack Properties
 
+        [SerializeField]JetpackPin jetpackPin;
+
         private bool isFacingRight = true;
+        
         
 
         #endregion
@@ -33,6 +36,8 @@ namespace Character
             playerS = GetComponent<PlayerScript>();
             print("Player Movement Initialized");
             rb2d = playerS.rb2d;
+            
+            
         }
         private void FixedUpdate()
         {
@@ -44,6 +49,8 @@ namespace Character
                 if (playerS.playerI.isRightPressed)
                 {
                     FlyRight();
+
+
 
                     if (!isFacingRight)
                     {
@@ -147,18 +154,22 @@ namespace Character
         internal void Thrust()
         {
             playerS.rb2d.AddForce(Vector3.up * jetpackThrust);
+            jetpackPin.FlyHorizontalEffect();
         }
         internal void FlyRight()
         {
             Vector3 velocity = Vector3.zero;
             Vector3 targetVelocity = new Vector2(playerS.moveSpeed * Time.fixedDeltaTime, playerS.rb2d.velocity.y);
             playerS.rb2d.velocity = Vector3.SmoothDamp(playerS.rb2d.velocity, targetVelocity, ref velocity, .05f);
+            jetpackPin.FlyVerticalEffect();
+            
         }
         internal void FlyLeft()
         {
             Vector3 velocity = Vector3.zero;
             Vector3 targetVelocity = new Vector2(-playerS.moveSpeed * Time.fixedDeltaTime, playerS.rb2d.velocity.y);
             playerS.rb2d.velocity = Vector3.SmoothDamp(playerS.rb2d.velocity, targetVelocity, ref velocity, .05f);
+            jetpackPin.FlyVerticalEffect();
         }
 
         private void Flip()

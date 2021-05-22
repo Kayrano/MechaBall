@@ -68,14 +68,14 @@ namespace Character
             Jetpack.gameObject.SetActive(true);
             isJetpackOn = true;
 
-            rb2d.rotation = 360;
+            transform.rotation = Quaternion.identity;
 
             rb2d.angularVelocity = 0;
 
             rb2d.drag = 0.7f;
 
-            if (rb2d.rotation == 360)
-                rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
+
 
         }
 

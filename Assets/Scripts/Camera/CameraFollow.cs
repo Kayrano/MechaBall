@@ -32,7 +32,7 @@ namespace camera
                 
                 rb2dCamera.constraints = RigidbodyConstraints2D.None;
 
-                transform.position = new Vector3(target.position.x, target.position.y, 0);
+                transform.position = new Vector3(target.position.x, target.position.y, -10);
 
                 Camera.main.orthographicSize = jetpackCameraSize;
 
