@@ -69,8 +69,10 @@
     <Compile Include="Assets\GameManager\Scripts\Menu\GameplayUI.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\LevelSelectionMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\MusicContainer.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\OptionsMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\PauseMenu.cs" />
+    <Compile Include="Assets\GameManager\Scripts\Menu\PausedOptionsMenu.cs" />
     <Compile Include="Assets\GameManager\Scripts\Menu\UIManager.cs" />
     <Compile Include="Assets\GameManager\Scripts\Utils\Events.cs" />
     <Compile Include="Assets\GameManager\Scripts\Utils\Singleton.cs" />

@@ -5,10 +5,21 @@ using UnityEngine;
 
 public class OptionsMenu : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer;
+    [Header("Music Mixer")]
+    [SerializeField] private AudioMixer musicSoundsMixer;
 
-    public void SetVolume(float volume)
+    [Header("Game Mixer")]
+    [SerializeField] private AudioMixer gameSoundsMixer;
+
+
+
+    public void SetMusicVolume(float volume)
     {
-        audioMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+        musicSoundsMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
+    public void SetGameVolume(float volume)
+    {
+        gameSoundsMixer.SetFloat("GameVolume", Mathf.Log10(volume) * 20);
+    }
+
 }
