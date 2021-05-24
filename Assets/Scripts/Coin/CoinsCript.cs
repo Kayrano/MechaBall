@@ -10,7 +10,7 @@ public class CoinsCript : MonoBehaviour
     public Text current_coin_text;
     public PlayerScript playerS;
 
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

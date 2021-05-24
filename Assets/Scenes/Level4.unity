@@ -59788,12 +59788,12 @@ PrefabInstance:
     - target: {fileID: 1923356424084467778, guid: 901838493d42a9a4f9800b313ada0b8a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.6
+      value: 92.6
       objectReference: {fileID: 0}
     - target: {fileID: 1923356424084467778, guid: 901838493d42a9a4f9800b313ada0b8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.1
+      value: 27.6
       objectReference: {fileID: 0}
     - target: {fileID: 1923356424084467778, guid: 901838493d42a9a4f9800b313ada0b8a,
         type: 3}
@@ -63729,6 +63729,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2984007685742747257, guid: 0fc11ca49889e6746813d8b91b289a48,
+        type: 3}
+      propertyPath: m_UseOneWay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2984007685742747259, guid: 0fc11ca49889e6746813d8b91b289a48,
         type: 3}
       propertyPath: m_Name
@@ -63736,6 +63741,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fc11ca49889e6746813d8b91b289a48, type: 3}
+--- !u!1 &1972612080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2984007685742747259, guid: 0fc11ca49889e6746813d8b91b289a48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972612079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1993063000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6653537718830262341, guid: 56dad5cedd1041945b3860ea7238cd31,
@@ -63757,12 +63768,12 @@ PrefabInstance:
     - target: {fileID: 1923356424084467778, guid: 901838493d42a9a4f9800b313ada0b8a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.78
+      value: 66.5
       objectReference: {fileID: 0}
     - target: {fileID: 1923356424084467778, guid: 901838493d42a9a4f9800b313ada0b8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.32
+      value: 31.2
       objectReference: {fileID: 0}
     - target: {fileID: 1923356424084467778, guid: 901838493d42a9a4f9800b313ada0b8a,
         type: 3}
@@ -63920,6 +63931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111200562}
+  - component: {fileID: 2111200563}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -63944,6 +63956,20 @@ Transform:
   m_Father: {fileID: 1405870831}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111200563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111200561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76ce3de765c3034a940cd9e495111c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerS: {fileID: 1624531081}
+  gate: {fileID: 1972612080}
 --- !u!1001 &2121586469
 PrefabInstance:
   m_ObjectHideFlags: 0

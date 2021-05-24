@@ -190,7 +190,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -171099893
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -78291,7 +78291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718590584e1caca498d0a8b2d8d6e6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetpackCameraSize: 12
+  jetpackCameraSize: 14
   target: {fileID: 1044835613}
   startCameraYPosition: 0
 --- !u!20 &519420031
@@ -83027,6 +83027,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 214302381}
     m_Modifications:
+    - target: {fileID: 2984007685742747238, guid: 0fc11ca49889e6746813d8b91b289a48,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2984007685742747256, guid: 0fc11ca49889e6746813d8b91b289a48,
         type: 3}
       propertyPath: m_RootOrder
@@ -83092,6 +83097,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 2984007685742747257, guid: 0fc11ca49889e6746813d8b91b289a48,
+        type: 3}
+      propertyPath: m_UseOneWay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2984007685742747259, guid: 0fc11ca49889e6746813d8b91b289a48,
         type: 3}
       propertyPath: m_Name
@@ -83102,6 +83112,12 @@ PrefabInstance:
 --- !u!4 &2026513386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2984007685742747256, guid: 0fc11ca49889e6746813d8b91b289a48,
+    type: 3}
+  m_PrefabInstance: {fileID: 2026513385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2026513387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2984007685742747259, guid: 0fc11ca49889e6746813d8b91b289a48,
     type: 3}
   m_PrefabInstance: {fileID: 2026513385}
   m_PrefabAsset: {fileID: 0}
@@ -83205,6 +83221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111200562}
+  - component: {fileID: 2111200563}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -83229,6 +83246,20 @@ Transform:
   m_Father: {fileID: 1405870831}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111200563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111200561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76ce3de765c3034a940cd9e495111c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerS: {fileID: 1624531081}
+  gate: {fileID: 2026513387}
 --- !u!1 &2121665996
 GameObject:
   m_ObjectHideFlags: 0

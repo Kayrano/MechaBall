@@ -554,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 2984007685742747257, guid: 0fc11ca49889e6746813d8b91b289a48,
         type: 3}
       propertyPath: m_UseOneWay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2984007685742747257, guid: 0fc11ca49889e6746813d8b91b289a48,
         type: 3}
@@ -576,6 +576,12 @@ PrefabInstance:
 --- !u!4 &204992639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2984007685742747256, guid: 0fc11ca49889e6746813d8b91b289a48,
+    type: 3}
+  m_PrefabInstance: {fileID: 204992638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &204992640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2984007685742747259, guid: 0fc11ca49889e6746813d8b91b289a48,
     type: 3}
   m_PrefabInstance: {fileID: 204992638}
   m_PrefabAsset: {fileID: 0}
@@ -13696,6 +13702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111200562}
+  - component: {fileID: 2111200563}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -13720,6 +13727,20 @@ Transform:
   m_Father: {fileID: 1405870831}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111200563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111200561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76ce3de765c3034a940cd9e495111c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerS: {fileID: 4415833138570925233}
+  gate: {fileID: 204992640}
 --- !u!1001 &2984007685605389238
 PrefabInstance:
   m_ObjectHideFlags: 0
