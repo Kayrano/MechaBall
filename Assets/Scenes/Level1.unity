@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9094,7 +9094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0, z: -10}
+  m_LocalPosition: {x: 3.42, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10103,7 +10103,7 @@ GameObject:
   - component: {fileID: 1414225476}
   - component: {fileID: 1414225475}
   - component: {fileID: 1414225474}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SliderPlatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10141,7 +10141,7 @@ SurfaceEffector2D:
   m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
-  m_UseBounce: 1
+  m_UseBounce: 0
 --- !u!68 &1414225475
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -10726,7 +10726,7 @@ GameObject:
   - component: {fileID: 1591510548}
   - component: {fileID: 1591510551}
   - component: {fileID: 1591510552}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SliderPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10964,7 +10964,7 @@ SurfaceEffector2D:
   m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
-  m_UseBounce: 1
+  m_UseBounce: 0
 --- !u!1001 &1599763369
 PrefabInstance:
   m_ObjectHideFlags: 0
